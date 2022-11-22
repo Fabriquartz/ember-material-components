@@ -1,0 +1,15 @@
+<div class='mdc-touch-target-wrapper' {{did-insert this.didInsert}}>
+  <button
+    class='mdc-fab mdc-fab--touch
+      {{if @mini 'mdc-fab--mini'}}
+      {{if (has-block) 'mdc-fab--extended'}}'
+    ...attributes type="button"
+  >
+    <div class='mdc-fab__ripple'></div>
+    <span class='material-icons mdc-fab__icon'>{{@icon}}</span>
+    {{#if (has-block)}}
+      <span class='mdc-fab__label'>{{yield}}</span>
+    {{/if}}
+    <div class='mdc-fab__touch'></div>
+  </button>
+</div>

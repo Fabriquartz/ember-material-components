@@ -1,0 +1,8 @@
+<div class="mdc-text-field-helper-line">
+  <div ...attributes class="mdc-text-field-helper-text" aria-hidden="true">
+    {{@text}}
+  </div>
+  {{#if @maxLength}}
+    <div class="mdc-text-field-character-counter">{{@currentLength}} / {{@maxLength}}</div>
+  {{/if}}
+</div>

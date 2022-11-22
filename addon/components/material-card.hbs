@@ -1,0 +1,16 @@
+<div class='mdc-card {{if @outlined "mdc-card--outlined"}}' ...attributes>
+  {{#if (or (has-block 'default') (has-block 'title') (has-block 'subtitle'))}}
+    <div class='mdc-card__content'>
+        <div class="mdc-card__title">{{yield to='title'}}</div>
+        <div class="mdc-card__subtitle">{{yield to='subtitle'}}</div>
+      <div class="mdc-card__text">{{yield}}</div>
+    </div>
+  {{/if}}
+  {{#if (has-block 'actions')}}
+    <div class='mdc-card__actions'>
+      <div class='mdc-card__action-buttons'>
+        {{yield to='actions'}}
+      </div>
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,28 @@
+<div class='mdc-touch-target-wrapper {{@class}}' {{did-insert this.didInsert}}>
+  <button
+    class='mdc-button mdc-button--touch
+      {{if @raised 'mdc-button--raised' (if @outlined "mdc-button--outlined")}}
+      {{if @unelevated 'mdc-button--unelevated'}}
+      {{if (and @icon (not @iconIsTrailing)) 'mdc-button--icon-leading'}}
+      {{if (and @icon @iconIsTrailing) 'mdc-button--icon-trailing'}}'
+    ...attributes type="button"
+  >
+    <span class='mdc-button__ripple'></span>
+    <span class='mdc-button__touch'></span>
+    {{#if (and @icon (not @iconIsTrailing))}}
+      <i
+        class='material-icons mdc-button__icon'
+        aria-hidden='true'
+      >{{@icon}}</i>
+    {{/if}}
+    {{#if (or (has-block 'default') @iconIsTrailing)}}
+      <span class='mdc-button__label'>{{yield}}</span>
+    {{/if}}
+    {{#if (and @icon @iconIsTrailing)}}
+      <i
+        class='material-icons mdc-button__icon'
+        aria-hidden='true'
+      >{{@icon}}</i>
+    {{/if}}
+  </button>
+</div>

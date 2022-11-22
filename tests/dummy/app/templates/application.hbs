@@ -1,5 +1,142 @@
-{{page-title "Dummy"}}
+{{page-title 'Dummy'}}
 
-<h2 id="title">Welcome to Ember</h2>
+<h2 id='title'>Welcome to Ember</h2>
 
-{{outlet}}
+<MaterialCard>
+  <:title>Title</:title>
+  <:subtitle>Subtitle</:subtitle>
+  <:default>Content</:default>
+  <:actions>
+    <MaterialCard::ActionButton>
+      Action 1
+    </MaterialCard::ActionButton>
+    <MaterialCard::ActionButton>
+      Action 2
+    </MaterialCard::ActionButton>
+  </:actions>
+</MaterialCard>
+<MaterialCard>
+  <:title>Icons & tooltips</:title>
+  <:default>
+    <span><MaterialIcon>favorite</MaterialIcon><MaterialTooltip>Favorite</MaterialTooltip></span>
+    <span><MaterialIcon>save</MaterialIcon><MaterialTooltip>Save</MaterialTooltip></span>
+    <span><MaterialIcon>remove</MaterialIcon><MaterialTooltip>Remove</MaterialTooltip></span>
+  </:default>
+</MaterialCard>
+<MaterialCard @outlined={{true}}>
+  <:title>Buttons</:title>
+  <:default>
+    <MaterialButton>Default</MaterialButton>
+    <MaterialButton @outlined={{true}}>Outlined</MaterialButton>
+    <MaterialButton @unelevated={{true}}>Unelevated</MaterialButton>
+    <MaterialButton @raised={{true}}>Raised</MaterialButton>
+    <MaterialButton @outlined={{true}} @icon='save'>With Icon</MaterialButton>
+    <MaterialButton
+      @outlined={{true}}
+      @icon='save'
+      @iconIsTrailing={{true}}
+    >With trailing Icon</MaterialButton>
+  </:default>
+</MaterialCard>
+<MaterialCard>
+  <:title>Fabs</:title>
+  <:default>
+    <MaterialFab @icon='save' />
+    <MaterialFab @icon='save' @mini={{true}} />
+    <MaterialFab @icon='save'>Save</MaterialFab>
+  </:default>
+</MaterialCard>
+<MaterialCard>
+  <:title>Input fields</:title>
+  <:default>
+    <MaterialTextField
+      @label='Default'
+      @value={{this.textInputValue}}
+      @helpText='Help text'
+      {{on 'input' this.onInput}}
+    />
+    <MaterialTextField
+      @required={{true}}
+      @label='Required'
+      @value={{this.textInputValue}}
+      @helpText='Help text'
+      {{on 'input' this.onInput}}
+    />
+    <MaterialTextField
+      @label='Min & max length'
+      @value={{this.textInputValue}}
+      @minLength='5'
+      @maxLength='10'
+      @helpText='Help text'
+      @showCharCount={{true}}
+      {{on 'input' this.onInput}}
+    />
+    <MaterialTextField
+      @outlined={{true}}
+      @label='Outlined'
+      @value={{this.textInputValue}}
+      @helpText='Help text'
+      @showCharCount={{true}}
+      {{on 'input' this.onInput}}
+    />
+    <MaterialTextField
+      @label='Textarea'
+      @textarea={{true}}
+      @value={{this.textInputValue}}
+      @minLength='5'
+      @maxLength='10'
+      @helpText='Help text'
+      {{on 'input' this.onInput}}
+    />
+    <MaterialTextField
+      @outlined={{true}}
+      @textarea={{true}}
+      @label='Outlined Textarea'
+      @value={{this.textInputValue}}
+      @minLength='5'
+      @maxLength='10'
+      @helpText='Help text'
+      {{on 'input' this.onInput}}
+    />
+  </:default>
+</MaterialCard>
+
+<MaterialCard>
+  <:title>Form controls</:title>
+  <:default>
+    <MaterialSwitch
+      @value={{this.switchValue}}
+      @onChange={{action (mut this.switchValue)}}
+    >Switch</MaterialSwitch>
+    <MaterialSwitch
+      @value={{this.switchValue}}
+      @onChange={{action (mut this.switchValue)}}
+      @disabled={{true}}
+    >Disabled Switch</MaterialSwitch>
+    <MaterialCheckbox @value={{this.checkboxValue}}>Checkbox</MaterialCheckbox>
+    <MaterialCheckbox @value={{this.checkboxValue}} @disabled={{true}}>Disabled
+      Checkbox</MaterialCheckbox>
+    <MaterialCheckbox @value={{true}} @indeterminate={{true}}>Indeterminate
+      Checkbox</MaterialCheckbox>
+    <span>
+      <MaterialRadioButton @checked={{true}}>Radio Button</MaterialRadioButton>
+      <MaterialRadioButton @checked={{false}}>Radio Button</MaterialRadioButton>
+    </span>
+    <MaterialRadioButton @checked={{true}} @disabled={{true}}>Disabled Radio
+      Button</MaterialRadioButton>
+  </:default>
+</MaterialCard>
+<MaterialCard>
+  <:title>Progress Indicators</:title>
+  <:default>
+    <MaterialLinearProgress @indeterminate={{true}} />
+    <br />
+    <MaterialLinearProgress @progress={{0.5}} @buffer={{0.6}} />
+    <br />
+    <MaterialLinearProgress @progress={{1}} />
+    <br />
+    <MaterialCircularProgress @indeterminate={{true}} />
+    <MaterialCircularProgress @progress={{0.75}} />
+    <MaterialCircularProgress @progress={{1}} />
+  </:default>
+</MaterialCard>

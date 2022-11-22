@@ -1,13 +1,13 @@
 {
-  "name": "ember-material-components",
-  "version": "0.0.0",
+  "name": "@fabriquartz/ember-material-components",
+  "version": "0.0.0-test.18",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/Fabriquartz/ember-material-components.git",
   "license": "MIT",
-  "author": "",
+  "author": "Fabriquartz",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -26,8 +26,27 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
+    "@ember/render-modifiers": "^2.0.0",
+    "@material/animation": "^13.0.0",
+    "@material/button": "^13.0.0",
+    "@material/card": "^13.0.0",
+    "@material/checkbox": "^13.0.0",
+    "@material/circular-progress": "^13.0.0",
+    "@material/fab": "^13.0.0",
+    "@material/form-field": "^13.0.0",
+    "@material/linear-progress": "^13.0.0",
+    "@material/radio": "^13.0.0",
+    "@material/ripple": "^13.0.0",
+    "@material/switch": "^13.0.0",
+    "@material/textfield": "^13.0.0",
+    "@material/tooltip": "^13.0.0",
+    "@material/typography": "^13.0.0",
+    "ember-auto-import": "^1.11.3",
     "ember-cli-babel": "^7.26.6",
-    "ember-cli-htmlbars": "^5.7.1"
+    "ember-cli-htmlbars": "^5.7.1",
+    "ember-cli-sass": "~10.0.1",
+    "ember-named-blocks-polyfill": "^0.2.4",
+    "sass": "^1.43.4"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -37,7 +56,6 @@
     "@glimmer/tracking": "^1.0.4",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-auto-import": "^1.11.3",
     "ember-cli": "~3.28.3",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-inject-live-reload": "^2.1.0",
@@ -53,6 +71,7 @@
     "ember-source": "~3.28.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^3.6.0",
+    "ember-truth-helpers": "^3.0.0",
     "ember-try": "^1.4.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -64,7 +83,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
     "qunit": "^2.16.0",
-    "qunit-dom": "^1.6.0"
+    "qunit-dom": "^1.6.0",
+    "tracked-toolbox": "^1.2.3"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16"
@@ -74,5 +94,8 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
