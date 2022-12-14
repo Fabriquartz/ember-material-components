@@ -1,0 +1,60 @@
+<div class="demo-title">
+  Dialog
+</div>
+<div class="demo-card demo-card--grid">
+  <MaterialDialog>
+    <:trigger as |open|>
+      <MaterialButton {{on 'click' (fn this.open open)}}>
+        Dialog
+      </MaterialButton>
+    </:trigger>
+    <:title>
+      Dialog
+    </:title>
+    <:actions as |Button close|>
+      <Button {{on 'click' (fn this.cancel close)}}>
+        Cancel
+      </Button>
+      <Button {{on 'click' (fn this.confirm close)}}>
+        Continue
+      </Button>
+    </:actions>
+  </MaterialDialog>
+  <MaterialDialog @fullscreen={{true}}>
+    <:trigger as |open|>
+      <MaterialButton {{on 'click' (fn this.open open)}}>
+        Fullscreen
+      </MaterialButton>
+    </:trigger>
+    <:close as |IconButton close|>
+      <IconButton {{on 'click' (fn this.cancel close)}}>
+        close
+      </IconButton>
+    </:close>
+    <:title>
+      Fullscreen dialog
+    </:title>
+    <:actions as |Button close|>
+      <Button {{on 'click' (fn this.cancel close)}}>
+        Cancel
+      </Button>
+      <Button {{on 'click' (fn this.confirm close)}}>
+        Continue
+      </Button>
+    </:actions>
+  </MaterialDialog>
+  {{#if this.showSnackbar}}
+    <MaterialSnackbar
+      {{on 'MDCSnackbar:closed' (fn (mut this.showSnackbar) false)}}
+    >
+      <:content>
+        {{this.snackbarText}}
+      </:content>
+      <:actions as |Button IconButton close|>
+        <IconButton {{on 'click' close}}>
+          close
+        </IconButton>
+      </:actions>
+    </MaterialSnackbar>
+  {{/if}}
+</div>

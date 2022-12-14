@@ -1,0 +1,97 @@
+<div class="demo-title">
+  Inputs
+</div>
+<div class="demo-card demo-card--text-field">
+  <MaterialTextField
+    @class="grid-item--3"
+    @label="Default"
+    @value={{this.textInputValue}}
+    @helpText="Help text"
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--1"
+    @label="Default"
+    @value={{this.textInputValue}}
+    @helpText="Help text"
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--2"
+    @required={{true}}
+    @label="Required"
+    @value={{this.textInputValue}}
+    @helpText="Help text"
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--2"
+    @label="Min & max length"
+    @value={{this.textInputValue}}
+    @minLength="5"
+    @maxLength="10"
+    @helpText="Help text"
+    @showCharCount={{true}}
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--4"
+    @label="Textarea"
+    @textarea={{true}}
+    @value={{this.textInputValue}}
+    @maxLength="255"
+    @helpText="Help text"
+    {{on 'input' this.onInput}}
+  />
+</div>
+<div class="demo-title">
+  Inputs outlined
+</div>
+<div class="demo-card demo-card--text-field">
+  <MaterialTextField
+    @class="grid-item--3"
+    @label="Default"
+    @value={{this.textInputValue}}
+    @helpText="Help text"
+    @outlined={{true}}
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--1"
+    @label="Default"
+    @value={{this.textInputValue}}
+    @helpText="Help text"
+    @outlined={{true}}
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--2"
+    @required={{true}}
+    @label="Required"
+    @value={{this.textInputValue}}
+    @helpText="Help text"
+    @outlined={{true}}
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--2"
+    @label="Min & max length"
+    @value={{this.textInputValue}}
+    @minLength="5"
+    @maxLength="10"
+    @helpText="Help text"
+    @showCharCount={{true}}
+    @outlined={{true}}
+    {{on 'input' this.onInput}}
+  />
+  <MaterialTextField
+    @class="grid-item--4"
+    @label="Textarea"
+    @textarea={{true}}
+    @value={{this.textInputValue}}
+    @maxLength="255"
+    @helpText="Help text"
+    @outlined={{true}}
+    {{on 'input' this.onInput}}
+  />
+</div>

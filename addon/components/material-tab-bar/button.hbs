@@ -1,0 +1,26 @@
+<button
+  class="mdc-tab
+    {{if @active 'mdc-tab--active'}}
+    {{if @dense 'mdc-tab--min-width'}}
+    {{if @stacked 'mdc-tab--stacked'}}"
+  role="tab"
+  aria-selected="true"
+  tabindex="0"
+  type="button"
+  ...attributes
+>
+  <span class="mdc-tab__content">
+    {{yield
+      (hash
+        button=(component 'material-icon' class='mdc-tab__icon')
+        label=(component 'material-tab-bar/button/label')
+      )
+    }}
+  </span>
+  <span class="mdc-tab-indicator {{if @active 'mdc-tab-indicator--active'}}">
+    <span
+      class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    ></span>
+  </span>
+  <span class="mdc-tab__ripple"></span>
+</button>

@@ -2,10 +2,90 @@ html {
   font-family: Roboto, sans-serif;
 }
 
-.mdc-card {
-    margin-bottom: 1em;
+body {
+  margin: 0;
 }
 
-.mdc-text-field {
-  width: 100%;
+// start drawer/header
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.main-content { 
+}
+
+.app-bar {
+  position: absolute;
+}
+
+// Only apply this style if below top app bar.
+.mdc-top-app-bar {
+  z-index: 7;
+}
+// end drawer/header
+
+.dummy-application {
+  display: flex;
+  height: 100vh;
+
+  > *:last-child {
+    background-color: #fafafa;
+  }
+}
+
+.demo-title {
+  width: 60em;
+  margin: 2em auto 1em;
+  font-weight: bold;
+  padding: 1em 0;
+
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.demo-card {
+  width: 60em;
+  margin: 1em auto;
+  overflow: hidden;
+  padding: 1em;
+
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1em;
+    grid-gap: 1em;
+  }
+
+  &--material-list {
+    padding: 0;
+    border: 1px solid #bdbdbd;
+    background: white;
+
+    .mdc-deprecated-list--avatar-list {
+      .mdc-deprecated-list-item__graphic {
+        color: white;
+        background-color: #64b5f6;
+      }
+    }
+  }
+
+  &--text-field {
+    .mdc-text-field {
+      width: 100%;
+    }
+  }
+}
+
+.grid-item--1 {
+  grid-column: span 1;
+}
+.grid-item--2 {
+  grid-column: span 2;
+}
+.grid-item--3 {
+  grid-column: span 3;
+}
+.grid-item--4 {
+  grid-column: span 4;
 }

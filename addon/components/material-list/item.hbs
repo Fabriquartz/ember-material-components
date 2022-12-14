@@ -1,0 +1,21 @@
+<li
+  class="mdc-deprecated-list-item
+    {{if @activated 'mdc-deprecated-list-item--activated'}}"
+  ...attributes
+  {{did-insert this.didInsert}}
+>
+  <span class="mdc-deprecated-list-item__ripple"></span>
+  {{yield
+    (hash
+      checkbox=(component
+        'material-checkbox/inner' class='mdc-deprecated-list-item__meta'
+      )
+      radioButton=(component
+        'material-radio-button/inner' class='mdc-deprecated-list-item__meta'
+      )
+      text=(component 'material-list/item/text')
+      iconLeading=(component 'material-list/item/icon/leading')
+      iconTrailing=(component 'material-list/item/icon/trailing')
+    )
+  }}
+</li>

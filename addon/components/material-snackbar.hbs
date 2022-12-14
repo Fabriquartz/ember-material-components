@@ -1,0 +1,15 @@
+<aside class="mdc-snackbar" ...attributes {{did-insert this.didInsert}}>
+  <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+    <div class="mdc-snackbar__label" aria-atomic="false">
+      {{yield to='content'}}
+    </div>
+    <div class="mdc-snackbar__actions" aria-atomic="true">
+      {{yield
+        (component 'material-button' class='mdc-snackbar__action')
+        (component 'material-icon-button' class='mdc-snackbar__dismiss')
+        this.close
+        to='actions'
+      }}
+    </div>
+  </div>
+</aside>

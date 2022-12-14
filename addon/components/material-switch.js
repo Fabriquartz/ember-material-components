@@ -13,15 +13,26 @@ export default class MaterialSwitchComponent extends Component {
   @action
   didInsert(element) {
     this.switchControl = new MDCSwitch(element);
+    this.hasUpdated(element);
   }
 
   @action
-  setValues(element, [value]) {
-    this.switchControl.value = value;
+  hasUpdated(element) {
+    console.log('hasupdated');
+    this.setValue(element, this.args.value);
+  }
+
+  @action
+  setValue(element, value) {
+    console.log('----', value);
+    if (this.switchControl.selected !== value) {
+      this.switchControl.selected = value;
+    }
   }
 
   @action
   onClick() {
-    this.args.onChange(!this.args.value);
+    console.log('aaaa', this.switchControl.selected);
+    this.args.onChange(!this.switchControl.selected);
   }
 }

@@ -1,0 +1,35 @@
+{{yield this.open to='trigger'}}
+<div
+  class="mdc-dialog {{if @fullscreen 'mdc-dialog--fullscreen'}}"
+  {{did-insert this.didInsert}}
+>
+  <div class="mdc-dialog__container">
+    <div class="mdc-dialog__surface" ...attributes>
+      <div class="mdc-dialog__header">
+        {{#unless @hideTitle}}
+          <h2 class="mdc-dialog__title" id="my-dialog-title">
+            {{yield this.close to='title'}}
+          </h2>
+        {{/unless}}
+        {{yield
+          (component 'material-icon-button' class='mdc-dialog__close')
+          this.close
+          to='close'
+        }}
+      </div>
+      <div class="mdc-dialog__content" id="my-dialog-content">
+        {{yield this.close to='content'}}
+      </div>
+      {{#unless @hideActions}}
+        <div class="mdc-dialog__actions">
+          {{yield
+            (component 'material-button' class='mdc-dialog__button')
+            this.close
+            to='actions'
+          }}
+        </div>
+      {{/unless}}
+    </div>
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>

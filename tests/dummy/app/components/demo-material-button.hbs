@@ -1,0 +1,84 @@
+<div class="demo-title">
+  Demos
+</div>
+<div class="demo-card demo-card--grid">
+  <span class="grid-item grid-item--4">
+    Text
+  </span>
+  <MaterialButton class="grid-item grid-item--1">
+    Default
+  </MaterialButton>
+  <MaterialButton class="grid-item grid-item--1" @icon="save">
+    Leading icon
+  </MaterialButton>
+  <MaterialButton
+    class="grid-item grid-item--1"
+    @icon="favorite"
+    @iconIsTrailing={{true}}
+  >
+    Trailing Icon
+  </MaterialButton>
+  <span class="grid-item grid-item--4">
+    Raised
+  </span>
+  <MaterialButton class="grid-item grid-item--1" @raised={{true}}>
+    Default
+  </MaterialButton>
+  <MaterialButton
+    class="grid-item grid-item--1"
+    @raised={{true}}
+    @icon="save"
+  >
+    Leading icon
+  </MaterialButton>
+  <MaterialButton
+    class="grid-item grid-item--1"
+    @icon="favorite"
+    @iconIsTrailing={{true}}
+    @raised={{true}}
+  >
+    Trailing Icon
+  </MaterialButton>
+  <span class="grid-item grid-item--4">
+    Unelevated
+  </span>
+  <MaterialButton class="grid-item grid-item--1" @unelevated={{true}}>
+    Default
+  </MaterialButton>
+  <MaterialButton
+    class="grid-item grid-item--1"
+    @unelevated={{true}}
+    @icon="save"
+  >
+    Leading icon
+  </MaterialButton>
+  <MaterialButton
+    class="grid-item grid-item--1"
+    @icon="favorite"
+    @iconIsTrailing={{true}}
+    @unelevated={{true}}
+  >
+    Trailing Icon
+  </MaterialButton>
+  <span class="grid-item grid-item--4">
+    Outlined
+  </span>
+  <MaterialButton class="grid-item grid-item--1" @outlined={{true}}>
+    Default
+  </MaterialButton>
+  <MaterialButton
+    class="grid-item grid-item--1"
+    @outlined={{true}}
+    @icon="save"
+  >
+    Leading icon
+  </MaterialButton>
+  <MaterialButton
+    class="grid-item grid-item--1"
+    @icon="favorite"
+    @iconIsTrailing={{true}}
+    @outlined={{true}}
+  >
+    Trailing Icon
+  </MaterialButton>
+</div>

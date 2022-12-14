@@ -1,0 +1,74 @@
+$primary: #2196f3;
+$secondary: #c5a6ff;
+$surface: #fff !default;
+
+@use '@material/theme' with ($primary: $primary, $secondary: $secondary);
+@use "@material/typography/mdc-typography";
+
+@use "@material/animation";
+@use '@material/floating-label/mdc-floating-label';
+@use '@material/line-ripple/mdc-line-ripple';
+@use '@material/notched-outline/mdc-notched-outline';
+@use '@material/textfield';
+@use '@material/textfield/helper-text';
+@use '@material/switch/styles' as switch;
+@use '@material/checkbox';
+@use '@material/form-field';
+@use '@material/radio/styles' as radio;
+@use '@material/fab';
+@use "@material/linear-progress";
+@use "@material/circular-progress/mdc-circular-progress";
+@use "@material/tooltip/styles" as tooltip;
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/list";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/icon-button/styles";
+@use "@material/drawer";
+@use "@material/dialog";
+@use "@material/snackbar/mdc-snackbar";
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+@use '@material/button';
+@use '@material/button/mdc-button';
+@use '@material/card';
+
+@include dialog.core-styles;
+@include textfield.core-styles;
+@include helper-text.helper-text-core-styles;
+@include checkbox.core-styles;
+@include form-field.core-styles;
+@include fab.core-styles;
+@include linear-progress.core-styles;
+@include list.deprecated-core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include card.core-styles;
+
+.mdc-card {
+  &__content {
+    padding: 16px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+  }
+
+  &__text,
+  &__subtitle {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    opacity: 0.6;
+  }
+}
