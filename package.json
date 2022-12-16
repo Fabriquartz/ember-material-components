@@ -1,5 +1,5 @@
 {
-  "name": "@fabriquartz/ember-material-components",
+  "name": "@plonquo/ember-material-components",
   "version": "0.0.0-test.43",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
@@ -106,8 +106,5 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
