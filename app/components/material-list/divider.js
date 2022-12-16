@@ -1,1 +1,1 @@
-export { default } from '@fabriquartz/ember-material-components/components/material-list/divider';
+export { default } from '@plonquo/ember-material-components/components/material-list/divider';
