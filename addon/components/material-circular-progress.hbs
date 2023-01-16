@@ -92,9 +92,8 @@
     class="mdc-circular-progress"
     style="width:24px;height:24px;"
     role="progressbar"
-    aria-label="Example Progress Bar"
-    aria-valuemin="0"
-    aria-valuemax="1"
+    {{did-insert this.didInsert}}
+    {{did-update this.setValues @indeterminate @progress}}
   >
     <div class="mdc-circular-progress__determinate-container">
       <svg
@@ -182,9 +181,8 @@
     class="mdc-circular-progress"
     style="width:36px;height:36px;"
     role="progressbar"
-    aria-label="Example Progress Bar"
-    aria-valuemin="0"
-    aria-valuemax="1"
+    {{did-insert this.didInsert}}
+    {{did-update this.setValues @indeterminate @progress}}
   >
     <div class="mdc-circular-progress__determinate-container">
       <svg

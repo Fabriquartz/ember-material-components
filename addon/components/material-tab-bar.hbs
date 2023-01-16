@@ -1,8 +1,12 @@
-<div class="mdc-tab-bar" role="tablist" {{did-insert this.didInsert}}>
+<div
+  class="mdc-tab-bar"
+  role="tablist"
+  {{did-insert this.didInsert}}
+>
   <div class="mdc-tab-scroller">
     <div class="mdc-tab-scroller__scroll-area">
       <div class="mdc-tab-scroller__scroll-content">
-        {{yield (component 'material-tab-bar/button')}}
+        {{yield (component 'material-tab-bar/button') this.tabBar this.activateTab}}
       </div>
     </div>
   </div>

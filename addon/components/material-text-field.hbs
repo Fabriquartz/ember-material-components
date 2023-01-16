@@ -9,7 +9,9 @@
 
       {{if @iconLeading 'mdc-text-field--with-leading-icon'}}
 
-      {{if @iconTrailing 'mdc-text-field--with-trailing-icon'}}"
+      {{if @iconTrailing 'mdc-text-field--with-trailing-icon'}}
+      
+      {{if @disabled 'mdc-text-field--disabled'}}"
     {{did-insert this.didInsert}}
   >
     {{#if @textarea}}
@@ -37,6 +39,7 @@
           maxlength={{@maxLength}}
           ...attributes
           aria-labelledby="{{this.guid}}-label"
+          disabled={{@disabled}}
         ></textarea>
       </span>
       {{#unless @outlined}}
@@ -68,6 +71,7 @@
         required={{@required}}
         minlength={{@minLength}}
         maxlength={{@maxLength}}
+        disabled={{@disabled}}
       />
       {{#if @iconTrailing}}
         <MaterialIcon
@@ -97,6 +101,7 @@
         required={{@required}}
         minlength={{@minLength}}
         maxlength={{@maxLength}}
+        disabled={{@disabled}}
       />
       {{#if @iconTrailing}}
         <MaterialIcon
