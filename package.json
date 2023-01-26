@@ -1,6 +1,6 @@
 {
   "name": "@plonquo/ember-material-components",
-  "version": "0.0.0-test.59",
+  "version": "0.0.0-test.62",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -99,7 +99,7 @@
     "tracked-toolbox": "^1.2.3"
   },
   "engines": {
-    "node": "12.* || 14.*"
+    "node": "12.* || 14.* || >= 16"
   },
   "ember": {
     "edition": "octane"

@@ -1,6 +1,54 @@
-<div class="demo-title">
-  Radio buttons
+<div class='demo-title'>
+  Menu
 </div>
-<div class="demo-card">
+<div class='demo-card'>
+  <MaterialMenu>
+    <:trigger as |open|>
+      <MaterialButton {{on 'click' open}}>
+        Open menu
+      </MaterialButton>
+    </:trigger>
 
+    <:content>
+      <MaterialList>
+        <MaterialList::Item @activated={{true}} as |item|>
+          <item.iconLeading>
+            plumbing
+          </item.iconLeading>
+          Mario
+        </MaterialList::Item>
+        <MaterialList::Item as |item|>
+          <item.iconLeading>
+            favorite
+          </item.iconLeading>
+          Princess Peach
+        </MaterialList::Item>
+        <MaterialList::Item as |item|>
+          <item.iconLeading>
+            bolt
+          </item.iconLeading>
+          Bowser
+        </MaterialList::Item>
+        <MaterialList::Divider />
+        <MaterialList::Item as |item|>
+          <item.iconLeading>
+            egg
+          </item.iconLeading>
+          Yoshi
+          <item.iconTrailing>
+            info
+          </item.iconTrailing>
+        </MaterialList::Item>
+        <MaterialList::Item as |item|>
+          <item.iconLeading>
+            star
+          </item.iconLeading>
+          Toad
+          <item.iconTrailing>
+            info
+          </item.iconTrailing>
+        </MaterialList::Item>
+      </MaterialList>
+    </:content>
+  </MaterialMenu>
 </div>
