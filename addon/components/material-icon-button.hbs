@@ -1,0 +1,20 @@
+<button
+  type="button"
+  class="mdc-icon-button {{unless @isToggleable 'material-icons'}} {{@class}}"
+  ...attributes
+  {{did-insert this.didInsert}}
+>
+  <div class="mdc-icon-button__ripple"></div>
+  {{#if @isToggleable}}
+    {{yield
+      (component
+        'material-icon' class='mdc-icon-button__icon mdc-icon-button__icon--on'
+      )
+      (component
+        'material-icon' class='mdc-icon-button__icon'
+      )
+    }}
+  {{else}}
+    {{yield}}
+  {{/if}}
+</button>
