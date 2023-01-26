@@ -1,12 +1,12 @@
 <button
   id='{{this.guid}}'
-  class='mdc-switch mdc-switch--unselected'
+  class='mdc-switch'
   type='button'
   role='switch'
-  aria-checked='false'
   disabled={{@disabled}}
   {{did-insert this.didInsert}}
-  {{did-update this.setValues @value}}
+  {{did-update this.hasUpdated @value}}
+  {{on 'click' this.onClick}}
 >
   <div class='mdc-switch__track'></div>
   <div class='mdc-switch__handle-track'>

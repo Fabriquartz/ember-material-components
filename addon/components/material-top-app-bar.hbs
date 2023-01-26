@@ -1,0 +1,64 @@
+{{#let
+  (component 'material-icon-button' class='mdc-top-app-bar__navigation-icon')
+  (component 'material-icon-button' class='mdc-top-app-bar__action-item')
+  'mdc-top-app-bar__section mdc-top-app-bar__section--align-start'
+  'mdc-top-app-bar__section mdc-top-app-bar__section--align-end' as |navButton actionButton sectionStartCss sectionEndCss|
+}}
+  {{#if @drawerWeb}}
+    <header class={{this.headerClass}} {{did-insert this.didInsert}}>
+      <div class="mdc-top-app-bar__row">
+        <section class={{sectionStartCss}}>
+          {{yield navButton this.toggleDrawer to='navigation'}}
+          <span class="mdc-top-app-bar__title">
+            {{yield to='title'}}
+          </span>
+        </section>
+        <section class={{sectionEndCss}} role="toolbar">
+          {{yield actionButton this.toggleDrawer to='actions'}}
+        </section>
+      </div>
+    </header>
+    {{yield this.setDrawer to='drawer'}}
+    <main class={{this.mainClasses}}>
+      {{yield to='main'}}
+    </main>
+  {{else if @drawer}}
+    {{yield this.setDrawer to='drawer'}}
+    <div class="mdc-drawer-app-content">
+      <header class="mdc-top-app-bar" {{did-insert this.didInsert}}>
+        <div class="mdc-top-app-bar__row">
+          <section class={{sectionStartCss}}>
+            {{yield navButton this.toggleDrawer to='navigation'}}
+            <span class="mdc-top-app-bar__title">
+              {{yield to='title'}}
+            </span>
+          </section>
+          <section class={{sectionEndCss}} role="toolbar">
+            {{yield actionButton this.toggleDrawer to='actions'}}
+          </section>
+        </div>
+      </header>
+      <main class={{this.mainClasses}}>
+        {{yield to='main'}}
+      </main>
+    </div>
+  {{else}}
+    {{yield this.setDrawer to='drawer'}}
+    <header class="mdc-top-app-bar" {{did-insert this.didInsert}}>
+      <div class="mdc-top-app-bar__row">
+        <section class={{sectionStartCss}}>
+          {{yield navButton this.toggleDrawer to='navigation'}}
+          <span class="mdc-top-app-bar__title">
+            {{yield to='title'}}
+          </span>
+        </section>
+        <section class={{sectionEndCss}} role="toolbar">
+          {{yield actionButton this.toggleDrawer to='actions'}}
+        </section>
+      </div>
+    </header>
+    <main class={{this.mainClasses}}>
+      {{yield to='main'}}
+    </main>
+  {{/if}}
+{{/let}}

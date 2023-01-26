@@ -1,0 +1,6 @@
+<div class="mdc-menu-surface--anchor">
+  {{yield this.open to='trigger'}}
+  <div class="mdc-menu mdc-menu-surface" {{did-insert this.didInsert}}>
+    {{yield to="content"}}
+  </div>
+</div>

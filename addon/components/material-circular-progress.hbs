@@ -1,27 +1,268 @@
-<div class="mdc-circular-progress" style="width:48px;height:48px;" role="progressbar" {{did-insert this.didInsert}} {{did-update this.setValues @indeterminate @progress}}>
-  <div class="mdc-circular-progress__determinate-container">
-    <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <circle class="mdc-circular-progress__determinate-track" cx="24" cy="24" r="18" stroke-width="4"/>
-      <circle class="mdc-circular-progress__determinate-circle" cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="113.097" stroke-width="4"/>
-    </svg>
-  </div>
-  <div class="mdc-circular-progress__indeterminate-container">
-    <div class="mdc-circular-progress__spinner-layer">
-      <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left">
-        <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="56.549" stroke-width="4"/>
-        </svg>
-      </div>
-      <div class="mdc-circular-progress__gap-patch">
-        <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="56.549" stroke-width="3.2"/>
-        </svg>
-      </div>
-      <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right">
-        <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="56.549" stroke-width="4"/>
-        </svg>
+{{#if @large}}
+  <div
+    class="mdc-circular-progress"
+    style="width:48px;height:48px;"
+    role="progressbar"
+    {{did-insert this.didInsert}}
+    {{did-update this.setValues @indeterminate @progress}}
+  >
+    <div class="mdc-circular-progress__determinate-container">
+      <svg
+        class="mdc-circular-progress__determinate-circle-graphic"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          class="mdc-circular-progress__determinate-track"
+          cx="24"
+          cy="24"
+          r="18"
+          stroke-width="4"
+        ></circle>
+        <circle
+          class="mdc-circular-progress__determinate-circle"
+          cx="24"
+          cy="24"
+          r="18"
+          stroke-dasharray="113.097"
+          stroke-dashoffset="113.097"
+          stroke-width="4"
+        ></circle>
+      </svg>
+    </div>
+    <div class="mdc-circular-progress__indeterminate-container">
+      <div class="mdc-circular-progress__spinner-layer">
+        <div
+          class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left"
+        >
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="24"
+              cy="24"
+              r="18"
+              stroke-dasharray="113.097"
+              stroke-dashoffset="56.549"
+              stroke-width="4"
+            ></circle>
+          </svg>
+        </div>
+        <div class="mdc-circular-progress__gap-patch">
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="24"
+              cy="24"
+              r="18"
+              stroke-dasharray="113.097"
+              stroke-dashoffset="56.549"
+              stroke-width="3.2"
+            ></circle>
+          </svg>
+        </div>
+        <div
+          class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right"
+        >
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="24"
+              cy="24"
+              r="18"
+              stroke-dasharray="113.097"
+              stroke-dashoffset="56.549"
+              stroke-width="4"
+            ></circle>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
-</div>
+{{else if @small}}
+  <div
+    class="mdc-circular-progress"
+    style="width:24px;height:24px;"
+    role="progressbar"
+    {{did-insert this.didInsert}}
+    {{did-update this.setValues @indeterminate @progress}}
+  >
+    <div class="mdc-circular-progress__determinate-container">
+      <svg
+        class="mdc-circular-progress__determinate-circle-graphic"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          class="mdc-circular-progress__determinate-track"
+          cx="12"
+          cy="12"
+          r="8.75"
+          stroke-width="2.5"
+        ></circle>
+        <circle
+          class="mdc-circular-progress__determinate-circle"
+          cx="12"
+          cy="12"
+          r="8.75"
+          stroke-dasharray="54.978"
+          stroke-dashoffset="54.978"
+          stroke-width="2.5"
+        ></circle>
+      </svg>
+    </div>
+    <div class="mdc-circular-progress__indeterminate-container">
+      <div class="mdc-circular-progress__spinner-layer">
+        <div
+          class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left"
+        >
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="8.75"
+              stroke-dasharray="54.978"
+              stroke-dashoffset="27.489"
+              stroke-width="2.5"
+            ></circle>
+          </svg>
+        </div>
+        <div class="mdc-circular-progress__gap-patch">
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="8.75"
+              stroke-dasharray="54.978"
+              stroke-dashoffset="27.489"
+              stroke-width="2"
+            ></circle>
+          </svg>
+        </div>
+        <div
+          class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right"
+        >
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="8.75"
+              stroke-dasharray="54.978"
+              stroke-dashoffset="27.489"
+              stroke-width="2.5"
+            ></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+{{else}}
+  <div
+    class="mdc-circular-progress"
+    style="width:36px;height:36px;"
+    role="progressbar"
+    {{did-insert this.didInsert}}
+    {{did-update this.setValues @indeterminate @progress}}
+  >
+    <div class="mdc-circular-progress__determinate-container">
+      <svg
+        class="mdc-circular-progress__determinate-circle-graphic"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          class="mdc-circular-progress__determinate-track"
+          cx="16"
+          cy="16"
+          r="12.5"
+          stroke-width="3"
+        ></circle>
+        <circle
+          class="mdc-circular-progress__determinate-circle"
+          cx="16"
+          cy="16"
+          r="12.5"
+          stroke-dasharray="78.54"
+          stroke-dashoffset="78.54"
+          stroke-width="3"
+        ></circle>
+      </svg>
+    </div>
+    <div class="mdc-circular-progress__indeterminate-container">
+      <div class="mdc-circular-progress__spinner-layer">
+        <div
+          class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left"
+        >
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="12.5"
+              stroke-dasharray="78.54"
+              stroke-dashoffset="39.27"
+              stroke-width="3"
+            ></circle>
+          </svg>
+        </div>
+        <div class="mdc-circular-progress__gap-patch">
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="12.5"
+              stroke-dasharray="78.54"
+              stroke-dashoffset="39.27"
+              stroke-width="2.4"
+            ></circle>
+          </svg>
+        </div>
+        <div
+          class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right"
+        >
+          <svg
+            class="mdc-circular-progress__indeterminate-circle-graphic"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="12.5"
+              stroke-dasharray="78.54"
+              stroke-dashoffset="39.27"
+              stroke-width="3"
+            ></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}

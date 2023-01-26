@@ -1,0 +1,18 @@
+<div class="demo-title">
+  Demos
+</div>
+<div class="demo-card">
+  <MaterialSwitch
+    @value={{this.switchValue}}
+    @onChange={{fn (mut this.switchValue)}}
+  >
+    Switch
+  </MaterialSwitch>
+  <MaterialSwitch
+    @value={{this.switchValue}}
+    @onChange={{fn (mut this.switchValue)}}
+    @disabled={{true}}
+  >
+    Disabled Switch
+  </MaterialSwitch>
+</div>
