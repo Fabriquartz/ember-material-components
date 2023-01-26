@@ -3,25 +3,24 @@
     <:drawer as |setDrawer|>
       <MaterialDrawer @modal={{this.settings.materialDrawerModal}} @setDrawer={{setDrawer}}>
         {{#each this.pages as |page|}}
-          <MaterialList::item
-            @activated={{page.isActive}}
+          <MaterialButton
             {{on 'click' (fn this.openRoute page.route)}}
           >
             {{page.name}}
-          </MaterialList::item>
+          </MaterialButton>
         {{/each}}
       </MaterialDrawer>
     </:drawer>
     <:navigation as |IconButton toggleDrawer|>
-      <IconButton {{on 'click' toggleDrawer}}>
+      {{!-- <IconButton {{on 'click' toggleDrawer}}>
         menu
-      </IconButton>
+      </IconButton> --}}
     </:navigation>
     <:title>
       Ember material components
     </:title>
     <:actions as |IconButton|>
-      <IconButton>
+      {{!-- <IconButton>
         favorite
       </IconButton>
       <IconButton>
@@ -29,7 +28,7 @@
       </IconButton>
       <IconButton>
         more_vert
-      </IconButton>
+      </IconButton> --}}
     </:actions>
     <:main>
       {{outlet}}
