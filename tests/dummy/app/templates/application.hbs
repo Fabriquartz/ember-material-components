@@ -1,37 +1,55 @@
-<div class="dummy-application">
-  <MaterialTopAppBar @drawerWeb={{true}} @fixed={{true}}>
-    <:drawer as |setDrawer|>
-      <MaterialDrawer @modal={{this.settings.materialDrawerModal}} @setDrawer={{setDrawer}}>
+<div class='dummy-application'>
+  {{#if this._drawer}}
+    <MaterialDrawer @modal={{this.modal}} @dismissable={{this.dismissable}}>
+      <:drawerContent as |Header|>
+        <Header>
+          <:title>Material Design</:title>
+          <:subtitle>Ember material design components</:subtitle>
+        </Header>
         {{#each this.pages as |page|}}
-          <MaterialButton
-            {{on 'click' (fn this.openRoute page.route)}}
-          >
+          <MaterialButton {{on 'click' (fn this.openRoute page.route)}}>
             {{page.name}}
           </MaterialButton>
         {{/each}}
-      </MaterialDrawer>
-    </:drawer>
-    <:navigation as |IconButton toggleDrawer|>
-      {{!-- <IconButton {{on 'click' toggleDrawer}}>
-        menu
-      </IconButton> --}}
-    </:navigation>
-    <:title>
-      Ember material components
-    </:title>
-    <:actions as |IconButton|>
-      {{!-- <IconButton>
-        favorite
-      </IconButton>
-      <IconButton>
-        star
-      </IconButton>
-      <IconButton>
-        more_vert
-      </IconButton> --}}
-    </:actions>
-    <:main>
-      {{outlet}}
-    </:main>
-  </MaterialTopAppBar>
+      </:drawerContent>
+      <:applicationContent as |toggleDrawer|>
+        <MaterialTopAppBar
+          @short={{or this.short this.shortCollapsed}}
+          @prominent={{this.prominent}}
+          @dense={{this.dense}}
+          @fixed={{this.fixed}}
+          @collapsed={{this.shortCollapsed}}
+        >
+          <:navigation as |IconButton|>
+            {{#if (or this.modal this.dismissable)}}
+              <IconButton {{on 'click' toggleDrawer}}>
+                menu
+              </IconButton>
+            {{/if}}
+          </:navigation>
+          <:title>
+            Ember material components
+          </:title>
+          <:actions as |IconButton|>
+            <IconButton
+              {{on 'click' (fn this.toggleDrawerVersion toggleDrawer)}}
+            >
+              favorite
+            </IconButton>
+            <IconButton
+              {{on 'click' (fn this.togglecurrentTopAppBarView toggleDrawer)}}
+            >
+              star
+            </IconButton>
+            <IconButton>
+              more_vert
+            </IconButton>
+          </:actions>
+        </MaterialTopAppBar>
+        <div>
+          {{outlet}}
+        </div>
+      </:applicationContent>
+    </MaterialDrawer>
+  {{/if}}
 </div>

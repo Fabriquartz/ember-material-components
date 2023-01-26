@@ -1,19 +1,24 @@
 <aside
-  class="mdc-drawer
-    {{if
-      @modal
-      'mdc-drawer--modal'
-      'mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust'
-    }}"
+  class='mdc-drawer
+    {{if @modal "mdc-drawer--modal"}}
+    {{if @dismissable "mdc-drawer--dismissible"}}'
   {{did-insert this.didInsert}}
+  {{did-update this.didInsert}}
+  ...attributes
 >
-  <div class="mdc-drawer__content">
-    <nav class="mdc-deprecated-list">
+  {{yield
+    (component 'material-drawer/header')
+    this.toggleDrawer
+    to='drawerContent'
+  }}
+  {{!-- <nav class='mdc-deprecated-list'>
       {{yield (component 'material-list/item')}}
-    </nav>
-  </div>
+    </nav> --}}
 </aside>
 
 {{#if @modal}}
-  <div class="mdc-drawer-scrim"></div>
+  <div class='mdc-drawer-scrim'></div>
 {{/if}}
+<div class='mdc-drawer-app-content'>
+  {{yield this.toggleDrawer to='applicationContent'}}
+</div>

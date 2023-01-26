@@ -2,37 +2,30 @@ import Component from '@glimmer/component';
 import { MDCTopAppBar } from '@material/top-app-bar';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
-import { isPresent } from '@ember/utils';
 
 export default class MaterialTopAppBarComponent extends Component {
   @tracked drawer;
 
-  get headerClass() {
-    return [
-      'mdc-top-app-bar',
-      this.args.short ? 'mdc-top-app-bar--short' : null,
-      this.args.shortAlways
-        ? 'mdc-top-app-bar--short mdc-top-app-bar--short-collapsed'
-        : null,
-      this.args.fixed ? 'mdc-top-app-bar--fixed' : null,
-      this.args.prominent ? 'mdc-top-app-bar--prominent' : null,
-      this.args.dense ? 'mdc-top-app-bar--dense' : null,
-    ]
-      .filter(isPresent)
-      .join(' ');
+  get mainClasses() {
+    return this.args.short
+      ? 'mdc-top-app-bar mdc-top-app-bar--short'
+      : this.args.prominent
+      ? 'mdc-top-app-bar mdc-top-app-bar--prominent'
+      : this.args.dense
+      ? 'mdc-top-app-bar mdc-top-app-bar--dense'
+      : this.args.fixed
+      ? 'mdc-top-app-bar mdc-top-app-bar--fixed'
+      : 'mdc-top-app-bar';
   }
 
-  get mainClasses() {
-    return [
-      'mdc-drawer-app-content',
-      this.args.short ? 'mdc-top-app-bar--fixed-adjust' : null,
-      this.args.shortAlways ? 'mdc-top-app-bar--fixed-adjust' : null,
-      this.args.fixed ? 'mdc-top-app-bar--fixed-adjust' : null,
-      this.args.prominent ? 'mdc-top-app-bar--prominent-fixed-adjust' : null,
-      this.args.dense ? 'mdc-top-app-bar--dense-fixed-adjust' : null,
-    ]
-      .filter(isPresent)
-      .join(' ');
+  get adjustCss() {
+    return this.args.short
+      ? 'mdc-top-app-bar--short-fixed-adjust'
+      : this.args.prominent
+      ? 'mdc-top-app-bar--prominent-fixed-adjust'
+      : this.args.dense
+      ? 'mdc-top-app-bar--dense-fixed-adjust'
+      : 'mdc-top-app-bar--fixed-adjust';
   }
 
   @action

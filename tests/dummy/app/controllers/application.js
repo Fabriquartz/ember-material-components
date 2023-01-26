@@ -1,10 +1,14 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-
+import { tracked } from '@glimmer/tracking';
+import { next } from '@ember/runloop';
 export default class ApplicationController extends Controller {
   @service router;
-  @service settings;
+
+  @tracked currentDrawerView = 0;
+  @tracked currentTopAppBarView = 0;
+  @tracked _drawer = true;
 
   get pages() {
     let pages = [
@@ -33,6 +37,62 @@ export default class ApplicationController extends Controller {
     });
 
     return pages;
+  }
+
+  get modal() {
+    return this.currentDrawerView === 1;
+  }
+
+  get dismissable() {
+    return this.currentDrawerView === 2;
+  }
+
+  get fixed() {
+    return this.currentTopAppBarView === 1;
+  }
+
+  get prominent() {
+    return this.currentTopAppBarView === 2;
+  }
+
+  get dense() {
+    return this.currentTopAppBarView === 3;
+  }
+
+  get shortCollapsed() {
+    return this.currentTopAppBarView === 4;
+  }
+
+  @action
+  toggleDrawerVersion(toggleDrawer) {
+    toggleDrawer();
+    this._drawer = false;
+
+    this.currentDrawerView++;
+
+    if (this.currentDrawerView > 2) {
+      this.currentDrawerView = 0;
+    }
+
+    next(() => {
+      this._drawer = true;
+    });
+  }
+
+  @action
+  togglecurrentTopAppBarView(toggleDrawer) {
+    toggleDrawer();
+    this._drawer = false;
+
+    this.currentTopAppBarView++;
+
+    if (this.currentTopAppBarView > 4) {
+      this.currentTopAppBarView = 0;
+    }
+
+    next(() => {
+      this._drawer = true;
+    });
   }
 
   @action
