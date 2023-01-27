@@ -48,6 +48,9 @@ body {
   margin: 1em auto;
   overflow: hidden;
   padding: 1em;
+  border: 1px solid #bdbdbd;
+  background: white;
+  box-sizing: border-box;
 
   &--grid {
     display: grid;
@@ -58,8 +61,6 @@ body {
 
   &--material-list {
     padding: 0;
-    border: 1px solid #bdbdbd;
-    background: white;
 
     .mdc-deprecated-list--avatar-list {
       .mdc-deprecated-list-item__graphic {
@@ -87,4 +88,10 @@ body {
 }
 .grid-item--4 {
   grid-column: span 4;
+}
+
+.demo-checkbox, .demo-radio-button {
+  ul {
+    list-style: none;
+  }
 }

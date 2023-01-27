@@ -1,0 +1,142 @@
+<div class='demo-title'>
+  One-lined list width leading and trailing icons
+</div>
+<div class='demo-card demo-card--material-list'>
+  <MaterialList as |Item Divider|>
+    <Item @activated={{true}} as |item|>
+      <item.iconLeading>
+        plumbing
+      </item.iconLeading>
+      Mario
+    </Item>
+    <Item as |item|>
+      <item.iconLeading>
+        favorite
+      </item.iconLeading>
+      Princess Peach
+    </Item>
+    <Item as |item|>
+      <item.iconLeading>
+        bolt
+      </item.iconLeading>
+      Bowser
+    </Item>
+    <Divider />
+    <Item as |item|>
+      <item.iconLeading>
+        egg
+      </item.iconLeading>
+      Yoshi
+      <item.iconTrailing>
+        info
+      </item.iconTrailing>
+    </Item>
+    <Item as |item|>
+      <item.iconLeading>
+        star
+      </item.iconLeading>
+      Toad
+      <item.iconTrailing>
+        info
+      </item.iconTrailing>
+    </Item>
+  </MaterialList>
+</div>
+<div class='demo-title'>
+  One-lined list with checkbox
+</div>
+<div class='demo-card demo-card--material-list'>
+  <MaterialList as |Item|>
+    <Item as |item|>
+      <item.iconLeading>
+        map
+      </item.iconLeading>
+      Select the next level on the map
+      <item.checkbox />
+    </Item>
+    <Item as |item|>
+      <item.iconLeading>
+        directions
+      </item.iconLeading>
+      Reach Peach's Castle in Mushroom Kingdom
+      <item.checkbox />
+    </Item>
+  </MaterialList>
+</div>
+<div class='demo-title'>
+  One-lined list width radio button
+</div>
+<div class='demo-card demo-card--material-list'>
+  <MaterialList as |Item|>
+    <Item as |item|>
+      Rescue the princess
+      <item.radioButton />
+    </Item>
+    <Item as |item|>
+      Defeat Bowser
+      <item.radioButton />
+    </Item>
+  </MaterialList>
+</div>
+<div class='demo-title'>
+  Two-lined list
+</div>
+<div class='demo-card demo-card--material-list'>
+  <MaterialList @twoLined={{true}} as |Item|>
+    <Item as |item|>
+      <item.text>
+        <:primary>
+          Two lined text item
+        </:primary>
+        <:secondary>
+          secondary text
+        </:secondary>
+      </item.text>
+      <item.radioButton />
+    </Item>
+    <Item as |item|>
+      <item.text>
+        <:primary>
+          Two lined text item
+        </:primary>
+        <:secondary>
+          secondary text
+        </:secondary>
+      </item.text>
+      <item.radioButton />
+    </Item>
+  </MaterialList>
+</div>
+<div class='demo-title'>
+  Two-lined list avatar list
+</div>
+<div class='demo-card demo-card--material-list'>
+  <MaterialList @twoLined={{true}} @avatar={{true}} as |Item|>
+    <Item as |item|>
+      <item.iconLeading>
+        plumbing
+      </item.iconLeading>
+      <item.text>
+        <:primary>
+          Two lined text item
+        </:primary>
+        <:secondary>
+          secondary text
+        </:secondary>
+      </item.text>
+    </Item>
+    <Item as |item|>
+      <item.iconLeading>
+        favorite
+      </item.iconLeading>
+      <item.text>
+        <:primary>
+          Two lined text item
+        </:primary>
+        <:secondary>
+          secondary text
+        </:secondary>
+      </item.text>
+    </Item>
+  </MaterialList>
+</div>

@@ -10,20 +10,9 @@ export default class MaterialRadioButtonComponent extends Component {
   }
 
   @action
-  setValues(element, [value, disabled, checked]) {
-    this.radio.value = value;
-    this.radio.disabled = disabled;
-    this.radio.checked = checked;
-  }
-
-  @action
   didInsert(element) {
-    this.radio = new MDCRadio(element.querySelector('.mdc-radio'));
-    this.formField = new MDCFormField(element);
-    this.formField.input = this.radio;
-
-    this.radio.value = this.args.value;
-    this.radio.disabled = this.args.disabled;
-    this.radio.checked = this.args.checked;
+    let radio = new MDCRadio(element.querySelector('.mdc-radio'));
+    let formField = new MDCFormField(element);
+    formField.input = radio;
   }
 }
