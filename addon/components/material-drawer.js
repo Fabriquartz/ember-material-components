@@ -7,11 +7,13 @@ export default class MaterialDrawerComponent extends Component {
 
   @action
   didInsert(element) {
+    let parentElement = element.parentElement;
+
     if (this.args.modal || this.args.dismissable) {
       this.drawer = MDCDrawer.attachTo(element);
 
       document.body.addEventListener('MDCDrawer:closed', () => {
-        element.parentElement.querySelector('input, button').focus();
+        parentElement.querySelector('input, button').focus();
       });
     }
   }

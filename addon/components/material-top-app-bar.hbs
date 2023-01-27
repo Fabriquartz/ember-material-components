@@ -1,28 +1,35 @@
-{{#let
-  (component 'material-icon-button' class='mdc-top-app-bar__navigation-icon')
-  (component 'material-icon-button' class='mdc-top-app-bar__action-item')
-  'mdc-top-app-bar__section mdc-top-app-bar__section--align-start'
-  'mdc-top-app-bar__section mdc-top-app-bar__section--align-end'
-  as |navButton actionButton sectionStartCss sectionEndCss|
-}}
-  <header
-    class='{{this.mainClasses}}
-      {{if (and @short @collapsed) "mdc-top-app-bar--short-collapsed"}}
-      {{if (and @short (has-block "actions")) "mdc-top-app-bar--has-actions"}}'
-    {{did-insert this.didInsert}}
-  >
-    <div class='mdc-top-app-bar__row'>
-      <section class={{sectionStartCss}}>
-        {{yield navButton this.toggleDrawer to='navigation'}}
-        <span class='mdc-top-app-bar__title'>
-          {{yield to='title'}}
-        </span>
-      </section>
-      <section class={{sectionEndCss}} role='toolbar'>
-        {{yield actionButton this.toggleDrawer to='actions'}}
-      </section>
-    </div>
-  </header>
+<header
+  class='{{this.mainClasses}}
+    {{if (and @short @collapsed) "mdc-top-app-bar--short-collapsed"}}
+    {{if (and @short (has-block "actions")) "mdc-top-app-bar--has-actions"}}'
+  {{did-insert this.didInsert}}
+>
+  <div class='mdc-top-app-bar__row'>
+    <section
+      class='mdc-top-app-bar__section mdc-top-app-bar__section--align-start'
+    >
+      {{yield
+        (component
+          'material-icon-button' class='mdc-top-app-bar__navigation-icon'
+        )
+        this.toggleDrawer
+        to='navigation'
+      }}
+      <span class='mdc-top-app-bar__title'>
+        {{yield to='title'}}
+      </span>
+    </section>
+    <section
+      class='mdc-top-app-bar__section mdc-top-app-bar__section--align-end'
+      role='toolbar'
+    >
+      {{yield
+        (component 'material-icon-button' class='mdc-top-app-bar__action-item')
+        this.toggleDrawer
+        to='actions'
+      }}
+    </section>
+  </div>
+</header>
 
-  <div class={{this.adjustCss}}></div>
-{{/let}}
+<div class={{this.adjustCss}}></div>

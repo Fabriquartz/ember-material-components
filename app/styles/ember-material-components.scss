@@ -44,27 +44,3 @@
 @include drawer.dismissible-core-styles;
 @include drawer.modal-core-styles;
 @include card.core-styles;
-
-.mdc-card {
-  &__content {
-    padding: 16px;
-  }
-
-  &__title {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.0125em;
-  }
-
-  &__text,
-  &__subtitle {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-    letter-spacing: 0.0178571429em;
-    text-decoration: inherit;
-    text-transform: inherit;
-    opacity: 0.6;
-  }
-}
