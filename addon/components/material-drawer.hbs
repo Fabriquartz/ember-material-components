@@ -1,0 +1,20 @@
+<aside
+  class='mdc-drawer
+    {{if @modal "mdc-drawer--modal"}}
+    {{if @dismissable "mdc-drawer--dismissible"}}'
+  {{did-insert this.attachDrawer}}
+  ...attributes
+>
+  {{yield
+    (component 'material-drawer/header')
+    this.toggleDrawer
+    to='drawerContent'
+  }}
+</aside>
+
+{{#if @modal}}
+  <div class='mdc-drawer-scrim'></div>
+{{/if}}
+<div class='mdc-drawer-app-content'>
+  {{yield this.toggleDrawer to='applicationContent'}}
+</div>

@@ -1,0 +1,8 @@
+<div class='mdc-drawer__header' ...attributes>
+  {{#if (has-block 'title')}}
+    <span class='mdc-drawer__title'>{{yield to='title'}}</span>
+    <span class='mdc-drawer__subtitle'>{{yield to='subtitle'}}</span>
+  {{else}}
+    {{yield}}
+  {{/if}}
+</div>
