@@ -1,8 +1,12 @@
 <header
-  class='{{this.mainClasses}}
+  class='mdc-top-app-bar
+    {{if @short "mdc-top-app-bar--short"}}
+    {{if @prominent "mdc-top-app-bar--prominent"}}
+    {{if @dense "mdc-top-app-bar--dense"}}
+    {{if @fixed "mdc-top-app-bar--fixed"}}
     {{if (and @short @collapsed) "mdc-top-app-bar--short-collapsed"}}
     {{if (and @short (has-block "actions")) "mdc-top-app-bar--has-actions"}}'
-  {{did-insert this.didInsert}}
+  {{did-insert this.attachTopAppBar}}
 >
   <div class='mdc-top-app-bar__row'>
     <section
@@ -32,4 +36,13 @@
   </div>
 </header>
 
-<div class={{this.adjustCss}}></div>
+<div
+  class='{{if @short "mdc-top-app-bar--short-fixed-adjust"}}
+    {{if @prominent "mdc-top-app-bar--prominent-fixed-adjust"}}
+    {{if @dense "mdc-top-app-bar--dense-fixed-adjust"}}
+    {{if @fixed "mdc-top-app-bar--fixed-adjust"}}
+    {{if
+      (not (or @short @prominent @dense @fixed))
+      "mdc-top-app-bar--fixed-adjust"
+    }}'
+></div>

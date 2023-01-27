@@ -2,8 +2,7 @@
   class='mdc-drawer
     {{if @modal "mdc-drawer--modal"}}
     {{if @dismissable "mdc-drawer--dismissible"}}'
-  {{did-insert this.didInsert}}
-  {{did-update this.didInsert}}
+  {{did-insert this.attachDrawer}}
   ...attributes
 >
   {{yield

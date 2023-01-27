@@ -6,7 +6,7 @@ export default class MaterialDrawerComponent extends Component {
   @tracked drawer;
 
   @action
-  didInsert(element) {
+  attachDrawer(element) {
     let parentElement = element.parentElement;
 
     if (this.args.modal || this.args.dismissable) {
