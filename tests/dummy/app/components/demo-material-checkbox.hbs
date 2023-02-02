@@ -1,0 +1,72 @@
+<div class='demo-title'>
+  Demos
+</div>
+<div class='demo-card demo-checkbox'>
+  <MaterialCheckbox
+    checked={{this.value1}}
+    @indeterminate={{this.indeterminate}}
+    {{on 'change' (fn this.update 'indeterminate')}}
+  >
+    Indeterminate
+  </MaterialCheckbox>
+  <ul>
+    <li>
+      <MaterialCheckbox
+        checked={{this.value1}}
+        {{on 'change' (fn this.update 'value1')}}
+      >
+        Checkbox 1
+      </MaterialCheckbox>
+    </li>
+    <li>
+      <MaterialCheckbox
+        checked={{this.value2}}
+        {{on 'change' (fn this.update 'value2')}}
+      >
+        Checkbox 2
+      </MaterialCheckbox>
+    </li>
+    <li>
+      <MaterialCheckbox
+        checked={{this.value3}}
+        {{on 'change' (fn this.update 'value3')}}
+      >
+        Checkbox 3
+      </MaterialCheckbox>
+    </li>
+  </ul>
+</div>
+
+<div class='demo-card demo-card--material-list'>
+  <MaterialList>
+    <MaterialList::Item as |item|>
+      <b>Toggle all checkboxes in the list</b>
+      <item.checkbox
+        checked={{this.value1}}
+        @indeterminate={{this.indeterminate}}
+        {{on 'change' (fn this.update 'indeterminate')}}
+      />
+    </MaterialList::Item>
+    <MaterialList::Item as |item|>
+      First checkbox in the material list
+      <item.checkbox
+        checked={{this.value1}}
+        {{on 'change' (fn this.update 'value1')}}
+      />
+    </MaterialList::Item>
+    <MaterialList::Item as |item|>
+      Second checkbox in the material list
+      <item.checkbox
+        checked={{this.value2}}
+        {{on 'change' (fn this.update 'value2')}}
+      />
+    </MaterialList::Item>
+    <MaterialList::Item as |item|>
+      Third checkbox in the material list
+      <item.checkbox
+        checked={{this.value3}}
+        {{on 'change' (fn this.update 'value3')}}
+      />
+    </MaterialList::Item>
+  </MaterialList>
+</div>

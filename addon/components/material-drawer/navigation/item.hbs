@@ -1,0 +1,17 @@
+<a
+  href="#"
+  class='mdc-deprecated-list-item
+    {{if @activated 'mdc-deprecated-list-item--activated'}}
+    {{@class}}'
+  tabindex='0'
+  ...attributes
+  {{did-insert this.applyRipple}}
+>
+  <span class='mdc-deprecated-list-item__ripple'></span>
+  {{#if (has-block 'icon')}}
+    <MaterialIcon class='mdc-deprecated-list-item__graphic'>
+      {{yield to='icon'}}
+    </MaterialIcon>
+  {{/if}}
+  {{yield to='title'}}
+</a>

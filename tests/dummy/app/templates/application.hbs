@@ -1,16 +1,28 @@
 <div class='dummy-application'>
   {{#if this._drawer}}
     <MaterialDrawer @modal={{this.modal}} @dismissable={{this.dismissable}}>
-      <:drawerContent as |Header|>
+      <:drawerContent as |Header Navigation|>
         <Header>
-          <:title>Material Design</:title>
-          <:subtitle>Ember material design components</:subtitle>
+          <:title>Material Components</:title>
+          <:subtitle>For Ember.js</:subtitle>
         </Header>
-        {{#each this.pages as |page|}}
-          <MaterialButton {{on 'click' (fn this.openRoute page.route)}}>
-            {{page.name}}
-          </MaterialButton>
-        {{/each}}
+        <Navigation as |Item Divider Subheader|>
+          <Divider />
+          <Subheader>Start</Subheader>
+          <Item>
+            <:title>Home</:title>
+          </Item>
+          <Item>
+            <:title>Get started</:title>
+          </Item>
+          <Divider />
+          <Subheader>Components</Subheader>
+          {{#each this.pages as |page|}}
+            <Item {{on 'click' (fn this.openRoute page.route)}}>
+              <:title>{{page.name}}</:title>
+            </Item>
+          {{/each}}
+        </Navigation>
       </:drawerContent>
       <:applicationContent as |toggleDrawer|>
         <MaterialTopAppBar

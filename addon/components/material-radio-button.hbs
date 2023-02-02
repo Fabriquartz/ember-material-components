@@ -1,20 +1,7 @@
 <div
-  class='mdc-touch-target-wrapper'
-    {{did-insert this.didInsert}}
-    {{did-update this.setValues @value @disabled @checked}}
+  class='mdc-touch-target-wrapper {{@class}}'
+  {{did-insert this.didInsert}}
 >
-  <div class='mdc-radio mdc-radio--touch'>
-    <input
-      class='mdc-radio__native-control'
-      type='radio'
-      id='{{this.guid}}'
-      name='radios'
-    />
-    <div class='mdc-radio__background'>
-      <div class='mdc-radio__outer-circle'></div>
-      <div class='mdc-radio__inner-circle'></div>
-    </div>
-    <div class='mdc-radio__ripple'></div>
-  </div>
+  <MaterialRadioButton::Inner @guid={{this.guid}} ...attributes />
   <label for='{{this.guid}}'>{{yield}}</label>
 </div>
