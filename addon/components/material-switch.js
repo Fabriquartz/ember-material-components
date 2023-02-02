@@ -2,7 +2,7 @@ import { guidFor } from '@ember/object/internals';
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { MDCSwitch } from '@material/switch';
-
+import { isPresent } from '@ember/utils';
 export default class MaterialSwitchComponent extends Component {
   switchControl;
 
@@ -13,15 +13,18 @@ export default class MaterialSwitchComponent extends Component {
   @action
   didInsert(element) {
     this.switchControl = new MDCSwitch(element);
+    this.toggleChecked();
   }
 
   @action
-  setValues(element, [value]) {
-    this.switchControl.value = value;
+  toggleChecked() {
+    if (isPresent(this.args.checked)) {
+      this.switchControl.selected = this.args.checked;
+    }
   }
 
   @action
   onClick() {
-    this.args.onChange(!this.args.value);
+    this.args.onChange && this.args.onChange(this.switchControl.selected);
   }
 }

@@ -7,7 +7,6 @@ export default class DemoMaterialDrawerComponent extends Component {
 
   @action
   onClick(value) {
-    console.log('value--', value);
     this.settings.materialDrawerModal = value;
   }
 }

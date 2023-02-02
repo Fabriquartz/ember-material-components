@@ -1,0 +1,51 @@
+<div class='demo-title'>
+  Switch as form field
+</div>
+<div class='demo-card demo-card--grid'>
+  <div class='grid-item grid-item--4'>
+    <MaterialSwitch
+      @checked={{this.switch1}}
+      @onChange={{fn this.update 'switch1'}}
+    >
+      Switch
+    </MaterialSwitch>
+  </div>
+  <div class='grid-item grid-item--4'>
+    <MaterialSwitch disabled={{true}}>
+      Disabled Switch (off)
+    </MaterialSwitch>
+  </div>
+  <div class='grid-item grid-item--4'>
+    <MaterialSwitch @checked={{true}} disabled={{true}}>
+      Disabled Switch (on)
+    </MaterialSwitch>
+  </div>
+</div>
+<div class='demo-title'>
+  Switch in material list
+</div>
+<div class='demo-card demo-card--material-list'>
+  <MaterialList>
+    <MaterialList::Item as |item|>
+      First switch in the material list
+      <item.switch
+        @checked={{this.switch1}}
+        @onChange={{fn this.update 'switch1'}}
+      />
+    </MaterialList::Item>
+    <MaterialList::Item as |item|>
+      Second switch in the material list
+      <item.switch
+        @checked={{this.switch2}}
+        @onChange={{fn this.update 'switch2'}}
+      />
+    </MaterialList::Item>
+    <MaterialList::Item as |item|>
+      Third switch in the material list
+      <item.switch
+        @checked={{this.switch3}}
+        @onChange={{fn this.update 'switch3'}}
+      />
+    </MaterialList::Item>
+  </MaterialList>
+</div>
