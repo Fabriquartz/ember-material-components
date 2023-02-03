@@ -1,1 +1,1 @@
-export { default } from '@fabriquartz/ember-material-components/components/material-card';
+export { default } from '@plonquo/ember-material-components/components/material-card';
