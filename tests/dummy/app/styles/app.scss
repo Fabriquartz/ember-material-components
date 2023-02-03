@@ -18,7 +18,7 @@ body {
   position: relative;
 }
 
-.main-content { 
+.main-content {
 }
 
 .mdc-top-app-bar {
@@ -90,8 +90,15 @@ body {
   grid-column: span 4;
 }
 
-.demo-checkbox, .demo-radio-button {
+.demo-checkbox,
+.demo-radio-button {
   ul {
     list-style: none;
+  }
+}
+
+.demo-switch {
+  li {
+    margin: 1em 0;
   }
 }
