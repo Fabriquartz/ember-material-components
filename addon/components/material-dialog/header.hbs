@@ -1,0 +1,25 @@
+{{#if @fullscreen}}
+  <div class='mdc-dialog__header {{@class}}' ...attributes>
+    <h2 class='mdc-dialog__title'>
+      {{#if (has-block 'title')}}
+        {{yield to='title'}}
+      {{else}}
+        {{yield}}
+      {{/if}}
+    </h2>
+    {{#if (has-block 'close')}}
+      {{yield
+        (component 'material-icon-button' class='mdc-dialog__close')
+        to='close'
+      }}
+    {{/if}}
+  </div>
+{{else}}
+  <h2 class='mdc-dialog__title'>
+    {{#if (has-block 'title')}}
+      {{yield to='title'}}
+    {{else}}
+      {{yield}}
+    {{/if}}
+  </h2>
+{{/if}}

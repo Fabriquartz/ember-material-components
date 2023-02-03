@@ -4,41 +4,41 @@
 <div class='demo-card demo-card--material-list'>
   <MaterialList as |Item Divider|>
     <Item @activated={{true}} as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         plumbing
-      </item.iconLeading>
+      </item.icon>
       Mario
     </Item>
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         favorite
-      </item.iconLeading>
+      </item.icon>
       Princess Peach
     </Item>
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         bolt
-      </item.iconLeading>
+      </item.icon>
       Bowser
     </Item>
     <Divider />
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         egg
-      </item.iconLeading>
+      </item.icon>
       Yoshi
-      <item.iconTrailing>
+      <item.icon>
         info
-      </item.iconTrailing>
+      </item.icon>
     </Item>
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         star
-      </item.iconLeading>
+      </item.icon>
       Toad
-      <item.iconTrailing>
+      <item.icon>
         info
-      </item.iconTrailing>
+      </item.icon>
     </Item>
   </MaterialList>
 </div>
@@ -48,16 +48,16 @@
 <div class='demo-card demo-card--material-list'>
   <MaterialList as |Item|>
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         map
-      </item.iconLeading>
+      </item.icon>
       Select the next level on the map
       <item.checkbox />
     </Item>
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         directions
-      </item.iconLeading>
+      </item.icon>
       Reach Peach's Castle in Mushroom Kingdom
       <item.checkbox />
     </Item>
@@ -113,9 +113,9 @@
 <div class='demo-card demo-card--material-list'>
   <MaterialList @twoLined={{true}} @avatar={{true}} as |Item|>
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         plumbing
-      </item.iconLeading>
+      </item.icon>
       <item.text>
         <:primary>
           Two lined text item
@@ -126,9 +126,9 @@
       </item.text>
     </Item>
     <Item as |item|>
-      <item.iconLeading>
+      <item.icon @leading={{true}}>
         favorite
-      </item.iconLeading>
+      </item.icon>
       <item.text>
         <:primary>
           Two lined text item
