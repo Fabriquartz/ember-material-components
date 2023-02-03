@@ -1,6 +1,9 @@
 $primary: #2196f3;
 $secondary: #c5a6ff;
 
+$material-card-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
+  0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+
 @import 'ember-material-components';
 
 html {
@@ -35,7 +38,7 @@ body {
 }
 
 .demo-title {
-  width: 60em;
+  width: min(60em, 95%);
   margin: 2em auto 1em;
   font-weight: bold;
   padding: 1em 0;
@@ -44,13 +47,13 @@ body {
 }
 
 .demo-card {
-  width: 60em;
+  width: min(60em, 95%);
   margin: 1em auto;
-  overflow: hidden;
   padding: 1em;
-  border: 1px solid #bdbdbd;
   background: white;
   box-sizing: border-box;
+  box-shadow: $material-card-shadow;
+  border-radius: 0.2em;
 
   &--grid {
     display: grid;
