@@ -1,0 +1,39 @@
+<div class='demo-title'>
+  Menu
+</div>
+<div class='demo-card'>
+  <MaterialMenu>
+    <:trigger as |open|>
+      <MaterialButton {{on 'click' open}}>
+        Open menu
+      </MaterialButton>
+    </:trigger>
+
+    <:content>
+      <MaterialList as |Item Divider|>
+        <Item>
+          Open
+        </Item>
+        <Item>
+          Open as...
+        </Item>
+        <Item>
+          Save
+        </Item>
+        <Item>
+          Save as...
+        </Item>
+        <Divider />
+        <Item>
+          Copy
+        </Item>
+        <Item>
+          Cut
+        </Item>
+        <Item>
+          Paste
+        </Item>
+      </MaterialList>
+    </:content>
+  </MaterialMenu>
+</div>
