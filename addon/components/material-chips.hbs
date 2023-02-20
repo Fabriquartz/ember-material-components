@@ -1,0 +1,11 @@
+<span
+  class='mdc-evolution-chip-set {{@class}}'
+  aria-multiselectable={{@multiSelect}}
+  role='grid'
+  {{did-insert this.attachChips}}
+  ...attributes
+>
+  <span class='mdc-evolution-chip-set__chips' role='presentation'>
+    {{yield (component 'material-chips/chip')}}
+  </span>
+</span>

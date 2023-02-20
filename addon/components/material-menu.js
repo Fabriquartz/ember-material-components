@@ -5,7 +5,7 @@ import { tracked } from '@glimmer/tracking';
 
 export default class MaterialMenuComponent extends Component {
   @tracked menu;
-  
+
   @action
   didInsert(element) {
     this.menu = new MDCMenu(element);
