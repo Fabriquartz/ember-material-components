@@ -31,6 +31,8 @@
 @use '@material/button';
 @use '@material/button/mdc-button';
 @use '@material/card';
+@use "@material/chips/styles" as chips;
+@use "@material/chips/deprecated/mdc-chips";
 
 @include dialog.core-styles;
 @include textfield.core-styles;

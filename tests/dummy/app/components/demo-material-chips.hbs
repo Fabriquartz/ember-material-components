@@ -1,0 +1,169 @@
+<div class='demo-title'>
+  Default chips
+</div>
+<div class='demo-card'>
+  <MaterialChips as |Chip|>
+    <Chip as |Button|>
+      <Button>
+        Chip 1
+      </Button>
+    </Chip>
+    <Chip as |Button|>
+      <Button>
+        Chip 1
+      </Button>
+    </Chip>
+    <Chip as |Button|>
+      <Button>
+        Chip 1
+      </Button>
+    </Chip>
+  </MaterialChips>
+</div>
+<div class='demo-title'>
+  Chips with icon
+</div>
+<div class='demo-card'>
+  <MaterialChips as |Chip|>
+    <Chip @hasLeadingIcon={{true}} as |Button|>
+      <Button as |Text Icon|>
+        <Icon>
+          favorite
+        </Icon>
+        <Text>
+          Favorite
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @hasLeadingIcon={{true}} as |Button|>
+      <Button as |Text Icon|>
+        <Icon>star</Icon>
+        <Text>
+          Star
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @hasLeadingIcon={{true}} as |Button|>
+      <Button as |Text Icon|>
+        <Icon>
+          thumb_up
+        </Icon>
+        <Text>
+          Like
+        </Text>
+      </Button>
+    </Chip>
+  </MaterialChips>
+</div>
+<div class='demo-title'>
+  Chips with graphic
+</div>
+<div class='demo-card'>
+  <MaterialChips as |Chip|>
+    <Chip @hasGraphic={{true}} as |Button|>
+      <Button as |Text Icon Graphic|>
+        <Graphic>
+          <div
+            class='emdc-chip__avatar'
+            style='background-image: url(avatar_1.jpeg)'
+          ></div>
+        </Graphic>
+        <Text>
+          Lancelot the Brave
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @hasGraphic={{true}} as |Button|>
+      <Button as |Text Icon Graphic|>
+        <Graphic>
+          <div
+            class='emdc-chip__avatar'
+            style='background-image: url(avatar_2.jpeg)'
+          ></div>
+        </Graphic>
+        <Text>
+          Bedevere the Wise
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @hasGraphic={{true}} as |Button|>
+      <Button as |Text Icon Graphic|>
+        <Graphic>
+          <div
+            class='emdc-chip__avatar'
+            style='background-image: url(avatar_3.jpeg)'
+          ></div>
+        </Graphic>
+        <Text>
+          Galahad the Pure
+        </Text>
+      </Button>
+    </Chip>
+  </MaterialChips>
+</div>
+<div class='demo-title'>
+  Selectable chips
+</div>
+<div class='demo-card'>
+  <MaterialChips as |Chip|>
+    <Chip @selectable={{true}} @hasLeadingIcon={{true}} as |Button|>
+      <Button as |Text Icon|>
+        <Icon>
+          favorite
+        </Icon>
+        <Text>
+          Favorite
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @selectable={{true}} @hasLeadingIcon={{true}} as |Button|>
+      <Button as |Text Icon|>
+        <Icon>star</Icon>
+        <Text>
+          Star
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @selectable={{true}} @hasLeadingIcon={{true}} as |Button|>
+      <Button as |Text Icon|>
+        <Icon>
+          thumb_up
+        </Icon>
+        <Text>
+          Like
+        </Text>
+      </Button>
+    </Chip>
+  </MaterialChips>
+</div>
+<div class='demo-title'>
+  Chips with secondary action
+</div>
+<div class='demo-card'>
+  <MaterialChips as |Chip|>
+    <Chip @hasTrailingAction={{true}} as |Button IconButton|>
+      <Button>
+        Chip 1
+      </Button>
+      <IconButton>
+        close
+      </IconButton>
+    </Chip>
+    <Chip @hasTrailingAction={{true}} as |Button IconButton|>
+      <Button>
+        Chip 2
+      </Button>
+      <IconButton>
+        close
+      </IconButton>
+    </Chip>
+    <Chip @hasTrailingAction={{true}} as |Button IconButton|>
+      <Button>
+        Chip 3
+      </Button>
+      <IconButton>
+        close
+      </IconButton>
+    </Chip>
+  </MaterialChips>
+</div>

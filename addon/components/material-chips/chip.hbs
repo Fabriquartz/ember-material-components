@@ -1,0 +1,23 @@
+<span
+  class='mdc-evolution-chip
+    {{if @selectable 'mdc-evolution-chip--selecting'}}
+    {{if @hasGraphic 'mdc-evolution-chip--with-avatar'}}
+    {{if
+      (or @hasGraphic @hasLeadingIcon)
+      'mdc-evolution-chip--with-primary-graphic'
+    }}
+    {{if @hasTrailingAction 'mdc-evolution-chip--with-trailing-action'}}
+    {{@class}}'
+  role='row'
+  id='{{this.guid}}'
+  ...attributes
+>
+  {{yield
+    (component
+      'material-chips/chip/button'
+      selectable=@selectable
+      hasGraphic=(or @hasGraphic @hasLeadingIcon)
+    )
+    (component 'material-chips/chip/icon-button')
+  }}
+</span>
