@@ -1,7 +1,7 @@
 {{#if @large}}
   <div
     class="mdc-circular-progress"
-    style="width:48px;height:48px;"
+    style="width:48px;height:48px;" {{!-- template-lint-disable --}}
     role="progressbar"
     {{did-insert this.didInsert}}
     {{did-update this.setValues @indeterminate @progress}}
@@ -90,7 +90,7 @@
 {{else if @small}}
   <div
     class="mdc-circular-progress"
-    style="width:24px;height:24px;"
+    style="width:24px;height:24px;" {{!-- template-lint-disable --}}
     role="progressbar"
     {{did-insert this.didInsert}}
     {{did-update this.setValues @indeterminate @progress}}
@@ -179,7 +179,7 @@
 {{else}}
   <div
     class="mdc-circular-progress"
-    style="width:36px;height:36px;"
+    style="width:36px;height:36px;" {{!-- template-lint-disable --}}
     role="progressbar"
     {{did-insert this.didInsert}}
     {{did-update this.setValues @indeterminate @progress}}

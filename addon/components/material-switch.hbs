@@ -3,6 +3,7 @@
   class='mdc-switch {{@class}}'
   type='button'
   role='switch'
+  aria-checked={{@checked}}
   {{did-insert this.didInsert}}
   {{did-update this.toggleChecked @checked}}
   {{on 'click' this.onClick}}
