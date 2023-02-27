@@ -1,8 +1,8 @@
-import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
+import Component from '@glimmer/component';
 import { MDCCheckbox } from '@material/checkbox';
 import { MDCFormField } from '@material/form-field';
-import { guidFor } from '@ember/object/internals';
 
 export default class MaterialCheckboxComponent extends Component {
   get guid() {

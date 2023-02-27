@@ -1,8 +1,8 @@
-import { guidFor } from '@ember/object/internals';
 import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
+import { isPresent } from '@ember/utils';
 import Component from '@glimmer/component';
 import { MDCSwitch } from '@material/switch';
-import { isPresent } from '@ember/utils';
 
 export default class MaterialSwitchComponent extends Component {
   switchControl;

@@ -1,7 +1,7 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import { MDCList } from '@material/list';
 import { tracked } from '@glimmer/tracking';
+import { MDCList } from '@material/list';
 
 export default class MaterialListComponent extends Component {
   @tracked list;

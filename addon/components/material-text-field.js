@@ -1,5 +1,5 @@
-import { guidFor } from '@ember/object/internals';
 import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import { MDCTextField } from '@material/textfield';
 
@@ -10,6 +10,6 @@ export default class MaterialTextFieldComponent extends Component {
 
   @action
   didInsert(element) {
-    this.field = new MDCTextField(element);
+    new MDCTextField(element);
   }
 }

@@ -1,0 +1,123 @@
+<div class='demo-title'>
+  Inputs
+</div>
+<div class='demo-card demo-card--text-field demo-card--grid'>
+
+  <MaterialTextField class='grid-item--4' as |Label TextInput|>
+    <Label>
+      Default
+    </Label>
+    <TextInput value={{this.textInputValue}} {{on 'input' this.onInput}} />
+  </MaterialTextField>
+  <MaterialTextField
+    class='grid-item--2'
+    @hasLeadingIcon={{true}}
+    as |Label TextInput Icon|
+  >
+    <Label>Required</Label>
+    <Icon>person</Icon>
+    <TextInput
+      value={{this.textInputValue}}
+      required='true'
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+  <div class='grid-item--2'>
+    <MaterialTextField
+      @hasTrailingIcon={{true}}
+      class='grid-item--2'
+      as |Label TextInput Icon|
+    >
+      <Label>
+        Min & max length
+      </Label>
+      <TextInput
+        value={{this.textInputValue}}
+        minLength='5'
+        maxLength='10'
+        {{on 'input' this.onInput}}
+      />
+      <Icon>star</Icon>
+    </MaterialTextField>
+    <MaterialTextField::HelperText>
+      Between 5 and 10 characters
+    </MaterialTextField::HelperText>
+  </div>
+  <MaterialTextField
+    class='grid-item--4'
+    @textarea={{true}}
+    as |Label TextArea|
+  >
+    <Label>
+      Textarea
+    </Label>
+    <TextArea
+      value={{this.textInputValue}}
+      maxLength='255'
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+</div>
+<div class='demo-title'>
+  Inputs outlined
+</div>
+<div class='demo-card demo-card--text-field demo-card--grid'>
+  <MaterialTextField
+    class='grid-item--4'
+    @outlined={{true}}
+    as |Label TextInput|
+  >
+    <Label>Default</Label>
+    <TextInput value={{this.textInputValue}} {{on 'input' this.onInput}} />
+  </MaterialTextField>
+  <MaterialTextField
+    class='grid-item--2'
+    @outlined={{true}}
+    @hasLeadingIcon={{true}}
+    as |Label TextInput Icon|
+  >
+    <Icon>star</Icon>
+    <Label>Required</Label>
+    <TextInput
+      value={{this.textInputValue}}
+      required='true'
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+  <div class='grid-item--2'>
+    <MaterialTextField
+      @hasTrailingIcon={{true}}
+      @outlined={{true}}
+      as |Label TextInput Icon|
+    >
+      <Label>
+        Min & max length
+      </Label>
+      <TextInput
+        value={{this.textInputValue}}
+        minLength='5'
+        maxLength='10'
+        {{on 'input' this.onInput}}
+      />
+      <Icon>person</Icon>
+    </MaterialTextField>
+    <MaterialTextField::HelperText>
+      Between 5 and 10 characters
+    </MaterialTextField::HelperText>
+  </div>
+  <div class='grid-item--4'>
+    <MaterialTextField
+      @outlined={{true}}
+      @textarea={{true}}
+      as |Label TextArea|
+    >
+      <Label>Textarea</Label>
+      <TextArea
+        value={{this.textInputValue}}
+        maxLength='255'
+        {{on 'input' this.onInput}}
+      />
+    </MaterialTextField>
+    <MaterialTextField::HelperText />
+  </div>
+</div>

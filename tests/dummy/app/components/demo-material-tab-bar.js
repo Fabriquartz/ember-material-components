@@ -1,7 +1,7 @@
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { next } from '@ember/runloop';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
 export default class DemoMaterialTabBarComponent extends Component {
   @tracked _tabBar = true;

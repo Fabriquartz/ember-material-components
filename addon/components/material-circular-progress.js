@@ -1,5 +1,5 @@
-import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import Component from '@glimmer/component';
 import { MDCCircularProgress } from '@material/circular-progress';
 
 export default class MaterialCircularProgressComponent extends Component {

@@ -74,7 +74,7 @@ body {
   }
 
   &--text-field {
-    .mdc-text-field {
+    .mdc-text-field, .emdc-text-field {
       width: 100%;
     }
   }

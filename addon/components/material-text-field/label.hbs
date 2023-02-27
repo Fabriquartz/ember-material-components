@@ -1,0 +1,15 @@
+{{#if @outlined}}
+  <span class='mdc-notched-outline'>
+    <span class='mdc-notched-outline__leading'></span>
+    <span class='mdc-notched-outline__notch'>
+      <span class='mdc-floating-label' id='{{@guid}}-label'>
+        {{yield}}
+      </span>
+    </span>
+    <span class='mdc-notched-outline__trailing'></span>
+  </span>
+{{else}}
+  <span class='mdc-floating-label' id='{{@guid}}-label'>
+    {{yield}}
+  </span>
+{{/if}}

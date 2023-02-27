@@ -1,7 +1,8 @@
-import Component from '@glimmer/component';
-import { MDCDrawer } from '@material/drawer';
 import { action } from '@ember/object';
+import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import { MDCDrawer } from '@material/drawer';
+
 export default class MaterialDrawerComponent extends Component {
   @tracked drawer;
 

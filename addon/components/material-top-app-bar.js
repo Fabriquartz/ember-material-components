@@ -1,7 +1,7 @@
-import Component from '@glimmer/component';
-import { MDCTopAppBar } from '@material/top-app-bar';
 import { action } from '@ember/object';
+import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import { MDCTopAppBar } from '@material/top-app-bar';
 
 export default class MaterialTopAppBarComponent extends Component {
   @tracked drawer;

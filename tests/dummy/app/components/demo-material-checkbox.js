@@ -1,7 +1,7 @@
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 import { A } from '@ember/array';
 import { action } from '@ember/object';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
 export default class DemoMaterialCheckboxComponent extends Component {
   @tracked value1 = true;
