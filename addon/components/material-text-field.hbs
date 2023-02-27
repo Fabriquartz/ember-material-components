@@ -1,84 +1,37 @@
-<div class={{@class}}>
-  <label
-    class='mdc-text-field
-      {{unless @label 'mdc-text-field--no-label'}}
-      {{if @outlined 'mdc-text-field--outlined' 'mdc-text-field--filled'}}
-      {{if @textarea 'mdc-text-field--textarea'}}'
-    {{did-insert this.didInsert}}
-  >
-    {{#if @textarea}}
-      {{#if @outlined}}
-        <span class='mdc-notched-outline'>
-          <span class='mdc-notched-outline__leading'></span>
-          {{#if @label}}
-           <span class='mdc-notched-outline__notch'>
-          <span
-            class='mdc-floating-label'
-            id='{{this.guid}}-label'
-          >{{@label}}</span>
-        </span>
-          {{/if}}
-          <span class='mdc-notched-outline__trailing'></span>
-        </span>
-      {{else}}
-        <span class='mdc-text-field__ripple'></span>
-      <span
-            class='mdc-floating-label'
-            id='{{this.guid}}-label'
-          >{{@label}}</span>
-      {{/if}}
-      <span class='mdc-text-field__resizer'>
-        <textarea
-          class='mdc-text-field__input'
-          maxlength={{@maxLength}}
-          ...attributes
-          aria-labelledby='{{this.guid}}-label'
-        ></textarea>
-      </span>
-      {{#unless @outlined}}
-        <span class='mdc-line-ripple'></span>
-      {{/unless}}
-    {{else if @outlined}}
-      <span class='mdc-notched-outline'>
-        <span class='mdc-notched-outline__leading'></span>
-        <span class='mdc-notched-outline__notch'>
-          <span
-            class='mdc-floating-label'
-            id='{{this.guid}}-label'
-          >{{@label}}</span>
-        </span>
-        <span class='mdc-notched-outline__trailing'></span>
-      </span>
-      <input
-        class='mdc-text-field__input'
-        type='text'
-        ...attributes
-        aria-labelledby='{{this.guid}}-label'
-        value={{@value}}
-        required={{@required}}
-        minlength={{@minLength}}
-        maxlength={{@maxLength}}
-      />
-    {{else}}
+<label
+  class='mdc-text-field
+    {{if @noLabel 'mdc-text-field--no-label'}}
+    {{if @outlined 'mdc-text-field--outlined' 'mdc-text-field--filled'}}
+    {{if @textarea 'mdc-text-field--textarea'}}
+    {{if @hasLeadingIcon 'mdc-text-field--with-leading-icon'}}
+    {{if @hasTrailingIcon 'mdc-text-field--with-trailing-icon'}}
+    {{if @disabled 'mdc-text-field--disabled'}}
+    {{@class}}'
+  {{did-insert this.didInsert}}
+  ...attributes
+>
+  {{#if @textarea}}
+    {{#unless @outlined}}
       <span class='mdc-text-field__ripple'></span>
-      <span
-        class='mdc-floating-label'
-        id='{{this.guid}}-label'
-      >{{@label}}</span>
-      <input
-        class='mdc-text-field__input'
-        type='text'
-        ...attributes
-        aria-labelledby='{{this.guid}}-label'
-        value={{@value}}
-        required={{@required}}
-        minlength={{@minLength}}
-        maxlength={{@maxLength}}
-      />
+    {{/unless}}
+    {{yield
+      (component 'material-text-field/label' guid=this.guid outlined=@outlined)
+      (component 'material-text-field/textarea' guid=this.guid)
+    }}
+    {{#unless @outlined}}
       <span class='mdc-line-ripple'></span>
-    {{/if}}
-  </label>
-  {{#if (or @maxLength @helpText @reserveHelpTextSpace)}}
-    <HelperText @currentLength={{@value.length}} @maxLength={{@maxLength}} @text={{@helpText}} />
+    {{/unless}}
+  {{else}}
+    {{#unless @outlined}}
+      <span class='mdc-text-field__ripple'></span>
+    {{/unless}}
+    {{yield
+      (component 'material-text-field/label' guid=this.guid outlined=@outlined)
+      (component 'material-text-field/input' guid=this.guid)
+      (component 'material-text-field/icon' leading=@hasLeadingIcon)
+    }}
+    {{#unless @outlined}}
+      <span class='mdc-line-ripple'></span>
+    {{/unless}}
   {{/if}}
-</div>
+</label>

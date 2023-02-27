@@ -1,7 +1,7 @@
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
 export default class DemoMaterialRadioButtonComponent extends Component {
   @tracked color1 = '#fbc02d';

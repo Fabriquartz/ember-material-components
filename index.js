@@ -1,9 +1,9 @@
 'use strict';
 
 const path = require('path');
-const resolve = require('resolve/sync');
 const funnel = require('broccoli-funnel');
 const { MergeTrees } = require('broccoli-merge-trees');
+const resolve = require('resolve/sync');
 
 const materialPackages = [
   { name: 'animation', path: '@material/' },

@@ -15,11 +15,25 @@ module.exports = {
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:prettier/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    'import/newline-after-import': ['error', { count: 1 }],
+    'import/no-unresolved': ['off'],
+    'import/order': [
+      'error',
+      {
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
+  },
   overrides: [
     // node files
     {

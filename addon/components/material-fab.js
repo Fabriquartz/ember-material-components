@@ -1,6 +1,6 @@
+import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { MDCRipple } from '@material/ripple';
-import { action } from '@ember/object';
 
 export default class MaterialFabComponent extends Component {
   @action

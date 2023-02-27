@@ -1,7 +1,7 @@
-import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import { MDCRipple } from '@material/ripple';
+import Component from '@glimmer/component';
 import { MDCIconButtonToggle } from '@material/icon-button';
+import { MDCRipple } from '@material/ripple';
 
 export default class MaterialIconButtonComponent extends Component {
   @action

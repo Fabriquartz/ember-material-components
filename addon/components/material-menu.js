@@ -1,7 +1,7 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import { MDCMenu } from '@material/menu';
 import { tracked } from '@glimmer/tracking';
+import { MDCMenu } from '@material/menu';
 
 export default class MaterialMenuComponent extends Component {
   @tracked menu;

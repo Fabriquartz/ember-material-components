@@ -1,8 +1,8 @@
+import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import { MDCFormField } from '@material/form-field';
 import { MDCRadio } from '@material/radio';
-import { guidFor } from '@ember/object/internals';
-import { action } from '@ember/object';
 
 export default class MaterialRadioButtonComponent extends Component {
   get guid() {
