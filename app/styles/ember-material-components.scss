@@ -1,7 +1,22 @@
-@use '@material/theme' with ($primary: $primary, $secondary: $secondary);
-@use "@material/typography/mdc-typography";
+@use '@material/theme' with (
+  $primary: $primary,
+  $on-primary: $on-primary,
+  $accent: $accent,
+  $secondary: $secondary,
+  $on-secondary: $on-secondary,
+  $background: $background,
+  $surface: $surface,
+  $on-surface: $on-surface,
+  $error: $error,
+  $on-error: $on-error,
+  $text-colors: $text-colors,
+  $text-emphasis: $text-emphasis,
+  $property-values: $property-values,
+);
 
-@use "@material/animation";
+@use '@material/typography/mdc-typography';
+
+@use '@material/animation';
 @use '@material/floating-label/mdc-floating-label';
 @use '@material/line-ripple/mdc-line-ripple';
 @use '@material/notched-outline/mdc-notched-outline';
@@ -12,27 +27,27 @@
 @use '@material/form-field';
 @use '@material/radio/styles' as radio;
 @use '@material/fab';
-@use "@material/linear-progress";
-@use "@material/circular-progress/mdc-circular-progress";
-@use "@material/tooltip/styles" as tooltip;
-@use "@material/list/mdc-list";
-@use "@material/menu-surface/mdc-menu-surface";
-@use "@material/menu/mdc-menu";
-@use "@material/list";
-@use "@material/top-app-bar/mdc-top-app-bar";
-@use "@material/icon-button/styles";
-@use "@material/drawer";
-@use "@material/dialog";
-@use "@material/snackbar/mdc-snackbar";
-@use "@material/tab-bar/mdc-tab-bar";
-@use "@material/tab-scroller/mdc-tab-scroller";
-@use "@material/tab-indicator/mdc-tab-indicator";
-@use "@material/tab/mdc-tab";
+@use '@material/linear-progress';
+@use '@material/circular-progress/mdc-circular-progress';
+@use '@material/tooltip/styles' as tooltip;
+@use '@material/list/mdc-list';
+@use '@material/menu-surface/mdc-menu-surface';
+@use '@material/menu/mdc-menu';
+@use '@material/list';
+@use '@material/top-app-bar/mdc-top-app-bar';
+@use '@material/icon-button/styles';
+@use '@material/drawer';
+@use '@material/dialog';
+@use '@material/snackbar/mdc-snackbar';
+@use '@material/tab-bar/mdc-tab-bar';
+@use '@material/tab-scroller/mdc-tab-scroller';
+@use '@material/tab-indicator/mdc-tab-indicator';
+@use '@material/tab/mdc-tab';
 @use '@material/button';
 @use '@material/button/mdc-button';
 @use '@material/card';
-@use "@material/chips/styles" as chips;
-@use "@material/chips/deprecated/mdc-chips";
+@use '@material/chips/styles' as chips;
+@use '@material/chips/deprecated/mdc-chips';
 
 @include dialog.core-styles;
 @include textfield.core-styles;
