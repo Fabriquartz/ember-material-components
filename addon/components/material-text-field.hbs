@@ -28,7 +28,8 @@
     {{yield
       (component 'material-text-field/label' guid=this.guid outlined=@outlined)
       (component 'material-text-field/input' guid=this.guid)
-      (component 'material-text-field/icon' leading=@hasLeadingIcon)
+      (component 'material-text-field/icon')
+      (component 'material-text-field/affix')
     }}
     {{#unless @outlined}}
       <span class='mdc-line-ripple'></span>

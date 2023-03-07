@@ -1,5 +1,9 @@
-<div class='mdc-text-field-helper-line' {{did-insert this.attachHelperText}}>
-  <div ...attributes class='mdc-text-field-helper-text'>
+<div
+  class='mdc-text-field-helper-line {{@class}}'
+  {{did-insert this.attachHelperText}}
+  ...attributes
+>
+  <div class='mdc-text-field-helper-text'>
     {{yield}}
   </div>
   {{#unless @hideCount}}

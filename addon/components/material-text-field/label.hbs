@@ -2,14 +2,14 @@
   <span class='mdc-notched-outline'>
     <span class='mdc-notched-outline__leading'></span>
     <span class='mdc-notched-outline__notch'>
-      <span class='mdc-floating-label' id='{{@guid}}-label'>
+      <span class='mdc-floating-label {{@class}}' id='{{@guid}}-label' ...attributes>
         {{yield}}
       </span>
     </span>
     <span class='mdc-notched-outline__trailing'></span>
   </span>
 {{else}}
-  <span class='mdc-floating-label' id='{{@guid}}-label'>
+  <span class='mdc-floating-label {{@class}}' id='{{@guid}}-label' ...attributes>
     {{yield}}
   </span>
 {{/if}}

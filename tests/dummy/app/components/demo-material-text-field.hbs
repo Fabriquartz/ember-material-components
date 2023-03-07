@@ -12,21 +12,24 @@
   <MaterialTextField
     class='grid-item--2'
     @hasLeadingIcon={{true}}
-    as |Label TextInput Icon|
+    @hasTrailingIcon={{true}}
+    as |Label TextInput Icon Affix|
   >
     <Label>Required</Label>
-    <Icon>person</Icon>
+    <Icon @leading={{true}}>person</Icon>
+    <Affix @leading={{true}}>@</Affix>
     <TextInput
       value={{this.textInputValue}}
       required='true'
       {{on 'input' this.onInput}}
     />
+    <Icon>clear</Icon>
   </MaterialTextField>
   <div class='grid-item--2'>
     <MaterialTextField
       @hasTrailingIcon={{true}}
       class='grid-item--2'
-      as |Label TextInput Icon|
+      as |Label TextInput Icon Affix|
     >
       <Label>
         Min & max length
@@ -37,6 +40,7 @@
         maxLength='10'
         {{on 'input' this.onInput}}
       />
+      <Affix>suffix</Affix>
       <Icon>star</Icon>
     </MaterialTextField>
     <MaterialTextField::HelperText>
@@ -74,21 +78,26 @@
     class='grid-item--2'
     @outlined={{true}}
     @hasLeadingIcon={{true}}
-    as |Label TextInput Icon|
+    @hasTrailingIcon={{true}}
+    as |Label TextInput Icon Affix|
   >
-    <Icon>star</Icon>
+    <Icon @leading={{true}}>star</Icon>
+    <Affix @leading={{true}}>www.</Affix>
     <Label>Required</Label>
     <TextInput
       value={{this.textInputValue}}
       required='true'
       {{on 'input' this.onInput}}
     />
+    <Affix>.com</Affix>
+
+    <Icon>clear</Icon>
   </MaterialTextField>
   <div class='grid-item--2'>
     <MaterialTextField
       @hasTrailingIcon={{true}}
       @outlined={{true}}
-      as |Label TextInput Icon|
+      as |Label TextInput Icon Affix|
     >
       <Label>
         Min & max length
@@ -99,6 +108,7 @@
         maxLength='10'
         {{on 'input' this.onInput}}
       />
+      <Affix>@mail.com</Affix>
       <Icon>person</Icon>
     </MaterialTextField>
     <MaterialTextField::HelperText>
