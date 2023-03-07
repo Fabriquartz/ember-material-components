@@ -1,0 +1,10 @@
+<span
+  class='mdc-text-field__affix
+    {{if
+      @leading
+      "mdc-text-field__affix--prefix"
+      "mdc-text-field__affix--suffix"
+    }}
+    {{@class}}'
+  ...attributes
+>{{yield}}</span>
