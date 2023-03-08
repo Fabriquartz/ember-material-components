@@ -1,6 +1,8 @@
 <input
   class='mdc-text-field__input {{@class}}'
   type='text'
+  value={{@value}}
   ...attributes
   aria-labelledby='{{@guid}}-label'
+  {{did-update this.updateLayout @value}}
 />

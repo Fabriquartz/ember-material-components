@@ -7,7 +7,7 @@
     <Label>
       Default
     </Label>
-    <TextInput value={{this.textInputValue}} {{on 'input' this.onInput}} />
+    <TextInput @value={{this.textInputValue}} {{on 'input' this.onInput}} />
   </MaterialTextField>
   <MaterialTextField
     class='grid-item--2'
@@ -19,7 +19,7 @@
     <Icon @leading={{true}}>person</Icon>
     <Affix @leading={{true}}>@</Affix>
     <TextInput
-      value={{this.textInputValue}}
+      @value={{this.textInputValue}}
       required='true'
       {{on 'input' this.onInput}}
     />
@@ -35,7 +35,7 @@
         Min & max length
       </Label>
       <TextInput
-        value={{this.textInputValue}}
+        @value={{this.textInputValue}}
         minLength='5'
         maxLength='10'
         {{on 'input' this.onInput}}
@@ -56,8 +56,39 @@
       Textarea
     </Label>
     <TextArea
-      value={{this.textInputValue}}
+      @value={{this.textInputValue}}
       maxLength='255'
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+  <MaterialTextField class='grid-item--2' as |Label TextInput|>
+    <Label>
+      Number
+    </Label>
+    <TextInput
+      type='number'
+      @value={{this.textInputValue}}
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+  <MaterialTextField class='grid-item--2' as |Label TextInput|>
+    <Label>
+      Datetime
+    </Label>
+    <TextInput
+      type='datetime-local'
+      @value={{this.textInputValue}}
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+  <MaterialTextField class='grid-item--2' as |Label TextInput|>
+    <Label>
+      Datetime
+    </Label>
+    <TextInput
+      type='text'
+      @value={{this.textInputValue}}
+      disabled={{true}}
       {{on 'input' this.onInput}}
     />
   </MaterialTextField>
@@ -72,7 +103,7 @@
     as |Label TextInput|
   >
     <Label>Default</Label>
-    <TextInput value={{this.textInputValue}} {{on 'input' this.onInput}} />
+    <TextInput @value={{this.textInputValue}} {{on 'input' this.onInput}} />
   </MaterialTextField>
   <MaterialTextField
     class='grid-item--2'
@@ -85,7 +116,7 @@
     <Affix @leading={{true}}>www.</Affix>
     <Label>Required</Label>
     <TextInput
-      value={{this.textInputValue}}
+      @value={{this.textInputValue}}
       required='true'
       {{on 'input' this.onInput}}
     />
@@ -103,7 +134,7 @@
         Min & max length
       </Label>
       <TextInput
-        value={{this.textInputValue}}
+        @value={{this.textInputValue}}
         minLength='5'
         maxLength='10'
         {{on 'input' this.onInput}}
@@ -123,11 +154,54 @@
     >
       <Label>Textarea</Label>
       <TextArea
-        value={{this.textInputValue}}
+        @value={{this.textInputValue}}
         maxLength='255'
         {{on 'input' this.onInput}}
       />
     </MaterialTextField>
     <MaterialTextField::HelperText />
   </div>
+  <MaterialTextField
+    class='grid-item--2'
+    @outlined={{true}}
+    as |Label TextInput|
+  >
+    <Label>
+      Number
+    </Label>
+    <TextInput
+      type='number'
+      @value={{this.textInputValue}}
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+  <MaterialTextField
+    class='grid-item--2'
+    @outlined={{true}}
+    as |Label TextInput|
+  >
+    <Label>
+      Datetime
+    </Label>
+    <TextInput
+      type='datetime-local'
+      @value={{this.textInputValue}}
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
+  <MaterialTextField
+    class='grid-item--2'
+    @outlined={{true}}
+    as |Label TextInput|
+  >
+    <Label>
+      Datetime
+    </Label>
+    <TextInput
+      type='text'
+      @value={{this.textInputValue}}
+      disabled={{true}}
+      {{on 'input' this.onInput}}
+    />
+  </MaterialTextField>
 </div>
