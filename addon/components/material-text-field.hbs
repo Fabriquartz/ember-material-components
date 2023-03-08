@@ -16,7 +16,7 @@
     {{/unless}}
     {{yield
       (component 'material-text-field/label' guid=this.guid outlined=@outlined)
-      (component 'material-text-field/textarea' guid=this.guid)
+      (component 'material-text-field/textarea' guid=this.guid textField=this.textField)
     }}
     {{#unless @outlined}}
       <span class='mdc-line-ripple'></span>
@@ -27,7 +27,7 @@
     {{/unless}}
     {{yield
       (component 'material-text-field/label' guid=this.guid outlined=@outlined)
-      (component 'material-text-field/input' guid=this.guid)
+      (component 'material-text-field/input' guid=this.guid textField=this.textField)
       (component 'material-text-field/icon')
       (component 'material-text-field/affix')
     }}

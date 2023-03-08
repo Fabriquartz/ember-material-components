@@ -2,7 +2,10 @@
 
   <textarea
     class='mdc-text-field__input {{@class}}'
+    value={{@value}}
     ...attributes
     aria-labelledby='{{@guid}}-label'
+      {{did-update this.updateLayout @value}}
+
   ></textarea>
 </span>
