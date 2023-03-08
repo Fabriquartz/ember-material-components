@@ -1,7 +1,6 @@
 @use '@material/theme' with (
   $primary: $primary,
   $on-primary: $on-primary,
-  $accent: $accent,
   $secondary: $secondary,
   $on-secondary: $on-secondary,
   $background: $background,
@@ -9,9 +8,6 @@
   $on-surface: $on-surface,
   $error: $error,
   $on-error: $on-error,
-  $text-colors: $text-colors,
-  $text-emphasis: $text-emphasis,
-  $property-values: $property-values,
 );
 
 @use '@material/typography/mdc-typography';
