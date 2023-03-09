@@ -1,84 +1,154 @@
-<div class="demo-title">
+<div class='demo-title'>
   Demos
 </div>
-<div class="demo-card demo-card--grid">
-  <span class="grid-item grid-item--4">
+<div class='demo-card demo-card--grid'>
+  <span class='grid-item grid-item--4'>
     Text
   </span>
-  <MaterialButton class="grid-item grid-item--1">
-    Default
-  </MaterialButton>
-  <MaterialButton class="grid-item grid-item--1" @icon="save">
-    Leading icon
+  <MaterialButton class='grid-item grid-item--1' as |Icon Text|>
+    <Text>Default</Text>
   </MaterialButton>
   <MaterialButton
-    class="grid-item grid-item--1"
-    @icon="favorite"
-    @iconIsTrailing={{true}}
+    class='grid-item grid-item--1'
+    @hasLeadingIcon={{true}}
+    as |Icon Text|
   >
-    Trailing Icon
+    <Icon>save</Icon>
+    <Text>Leading icon</Text>
   </MaterialButton>
-  <span class="grid-item grid-item--4">
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @hasIconTrailing={{true}}
+    as |Icon Text|
+  >
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
+  </MaterialButton>
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @hasIconLeading={{true}}
+    @hasIconTrailing={{true}}
+    as |Icon Text|
+  >
+    <Icon>save</Icon>
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
+  </MaterialButton>
+  <span class='grid-item grid-item--4'>
     Raised
   </span>
-  <MaterialButton class="grid-item grid-item--1" @raised={{true}}>
-    Default
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @raised={{true}}
+    as |Icon Text|
+  >
+    <Text>Default</Text>
   </MaterialButton>
   <MaterialButton
-    class="grid-item grid-item--1"
+    class='grid-item grid-item--1'
+    @hasLeadingIcon={{true}}
     @raised={{true}}
-    @icon="save"
+    as |Icon Text|
   >
-    Leading icon
+    <Icon>save</Icon>
+    <Text>Leading icon</Text>
   </MaterialButton>
   <MaterialButton
-    class="grid-item grid-item--1"
-    @icon="favorite"
-    @iconIsTrailing={{true}}
+    class='grid-item grid-item--1'
+    @hasIconTrailing={{true}}
     @raised={{true}}
+    as |Icon Text|
   >
-    Trailing Icon
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
   </MaterialButton>
-  <span class="grid-item grid-item--4">
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @hasIconLeading={{true}}
+    @hasIconTrailing={{true}}
+    @raised={{true}}
+    as |Icon Text|
+  >
+    <Icon>save</Icon>
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
+  </MaterialButton>
+  <span class='grid-item grid-item--4'>
     Unelevated
   </span>
-  <MaterialButton class="grid-item grid-item--1" @unelevated={{true}}>
-    Default
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @unelevated={{true}}
+    as |Icon Text|
+  >
+    <Text>Default</Text>
   </MaterialButton>
   <MaterialButton
-    class="grid-item grid-item--1"
+    class='grid-item grid-item--1'
+    @hasLeadingIcon={{true}}
     @unelevated={{true}}
-    @icon="save"
+    as |Icon Text|
   >
-    Leading icon
+    <Icon>save</Icon>
+    <Text>Leading icon</Text>
   </MaterialButton>
   <MaterialButton
-    class="grid-item grid-item--1"
-    @icon="favorite"
-    @iconIsTrailing={{true}}
+    class='grid-item grid-item--1'
+    @hasIconTrailing={{true}}
     @unelevated={{true}}
+    as |Icon Text|
   >
-    Trailing Icon
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
   </MaterialButton>
-  <span class="grid-item grid-item--4">
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @hasIconLeading={{true}}
+    @hasIconTrailing={{true}}
+    @unelevated={{true}}
+    as |Icon Text|
+  >
+    <Icon>save</Icon>
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
+  </MaterialButton>
+  <span class='grid-item grid-item--4'>
     Outlined
   </span>
-  <MaterialButton class="grid-item grid-item--1" @outlined={{true}}>
-    Default
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @outlined={{true}}
+    as |Icon Text|
+  >
+    <Text>Default</Text>
   </MaterialButton>
   <MaterialButton
-    class="grid-item grid-item--1"
+    class='grid-item grid-item--1'
+    @hasLeadingIcon={{true}}
     @outlined={{true}}
-    @icon="save"
+    as |Icon Text|
   >
-    Leading icon
+    <Icon>save</Icon>
+    <Text>Leading icon</Text>
   </MaterialButton>
   <MaterialButton
-    class="grid-item grid-item--1"
-    @icon="favorite"
-    @iconIsTrailing={{true}}
+    class='grid-item grid-item--1'
+    @hasIconTrailing={{true}}
     @outlined={{true}}
+    as |Icon Text|
   >
-    Trailing Icon
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
+  </MaterialButton>
+  <MaterialButton
+    class='grid-item grid-item--1'
+    @hasIconLeading={{true}}
+    @hasIconTrailing={{true}}
+    @outlined={{true}}
+    as |Icon Text|
+  >
+    <Icon>save</Icon>
+    <Text>Trailing Icon</Text>
+    <Icon>favorite</Icon>
   </MaterialButton>
 </div>
