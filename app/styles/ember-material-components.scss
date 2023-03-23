@@ -1,3 +1,13 @@
+$primary: null !default;
+$on-primary: null !default;
+$secondary: null !default;
+$on-secondary: null !default;
+$background: null !default;
+$surface: null !default;
+$on-surface: null !default;
+$error: null !default;
+$on-error: null !default;
+
 @use '@material/theme' with (
   $primary: $primary,
   $on-primary: $on-primary,
