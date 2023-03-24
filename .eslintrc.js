@@ -2,12 +2,13 @@
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2018,
+    requireConfigFile: false,
     sourceType: 'module',
-    ecmaFeatures: {
-      legacyDecorators: true,
+    babelOptions: {
+      configFile: require.resolve('./.babelrc'),
     },
   },
   plugins: ['ember'],
@@ -22,6 +23,10 @@ module.exports = {
     browser: true,
   },
   rules: {
+    'node/no-unpublished-require': [
+      'error',
+      { allowModules: ['ember-source-channel-url', '@embroider/test-setup'] },
+    ],
     'import/newline-after-import': ['error', { count: 1 }],
     'import/no-unresolved': ['off'],
     'import/order': [

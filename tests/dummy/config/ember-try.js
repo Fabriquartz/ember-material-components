@@ -6,7 +6,6 @@ const getChannelURL = require('ember-source-channel-url');
 module.exports = async function () {
   return {
     useYarn: true,
-    useVersionCompatibility: true,
     scenarios: [
       {
         name: 'ember-lts-3.28',
@@ -38,10 +37,6 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': await getChannelURL('beta'),
           },
-          dependencies: {
-            'ember-auto-import': '^2.0.0',
-            webpack: '^5.0.0',
-          },
         },
       },
       {
@@ -49,35 +44,6 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': await getChannelURL('canary'),
-          },
-          dependencies: {
-            'ember-auto-import': '^2.0.0',
-            webpack: '^5.0.0',
-          },
-        },
-      },
-      {
-        name: 'ember-canary',
-        npm: {
-          devDependencies: {
-            'ember-source': await getChannelURL('canary'),
-          },
-          dependencies: {
-            'ember-auto-import': '^2.0.0',
-            webpack: '^5.0.0',
-          },
-        },
-      },
-      {
-        name: 'ember-default-with-jquery',
-        env: {
-          EMBER_OPTIONAL_FEATURES: JSON.stringify({
-            'jquery-integration': true,
-          }),
-        },
-        npm: {
-          devDependencies: {
-            '@ember/jquery': '^1.1.0',
           },
         },
       },
