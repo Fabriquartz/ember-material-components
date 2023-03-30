@@ -57,7 +57,7 @@
               </item.icon>
               sir_galahad_the_pure@example.com
             </Item>
-            <Item as |item|>
+            <Item {{on 'click' this.transitionTo}} as |item|>
               <item.icon @leading={{true}}>
                 add
               </item.icon>
@@ -70,7 +70,7 @@
     <MaterialDialog @fullscreen={{this.fullscreen}}>
       <:trigger as |open|>
         <Item {{on 'click' open}}>
-          confirmation
+          Confirmation
         </Item>
       </:trigger>
       <:dialog as |Header Content Footer close|>
