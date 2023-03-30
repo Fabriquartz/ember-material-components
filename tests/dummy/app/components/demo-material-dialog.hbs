@@ -5,10 +5,7 @@
   <MaterialList as |Item Divider|>
     <Item as |item|>
       Show dialogs in fullscreen
-      <item.switch
-        @checked={{this.fullscreen}}
-        @onChange={{fn this.update 'fullscreen'}}
-      />
+      <item.switch @checked={{this.fullscreen}} @onChange={{fn this.update 'fullscreen' }} />
     </Item>
     <Divider />
     <MaterialDialog @fullscreen={{this.fullscreen}}>
@@ -17,17 +14,17 @@
           Alert
         </Item>
       </:trigger>
-      <:dialog as |item close|>
-        <item.content>
+      <:dialog as |Header Content Footer close|>
+        <Content>
           <p>
             To cross the river, you've to answer these questions three!
           </p>
-        </item.content>
-        <item.footer as |Button|>
+        </Content>
+        <Footer as |Button|>
           <Button @unelevated={{true}} {{on 'click' close}}>
             OK
           </Button>
-        </item.footer>
+        </Footer>
       </:dialog>
     </MaterialDialog>
     <MaterialDialog @fullscreen={{this.fullscreen}}>
@@ -36,11 +33,11 @@
           Simple
         </Item>
       </:trigger>
-      <:dialog as |item|>
-        <item.header>
+      <:dialog as |Header Content|>
+        <Header>
           Select your account
-        </item.header>
-        <item.content>
+        </Header>
+        <Content>
           <MaterialList @avatar={{true}} as |Item|>
             <Item as |item|>
               <item.icon @leading={{true}}>
@@ -67,7 +64,7 @@
               Add an account
             </Item>
           </MaterialList>
-        </item.content>
+        </Content>
       </:dialog>
     </MaterialDialog>
     <MaterialDialog @fullscreen={{this.fullscreen}}>
@@ -76,11 +73,11 @@
           confirmation
         </Item>
       </:trigger>
-      <:dialog as |item close|>
-        <item.header>
+      <:dialog as |Header Content Footer close|>
+        <Header>
           How brave is Sir Robin?
-        </item.header>
-        <item.content>
+        </Header>
+        <Content>
           <MaterialList @avatar={{true}} as |Item|>
             <Item as |item|>
               <item.radioButton @leading={{true}} />
@@ -95,15 +92,15 @@
               Not brave
             </Item>
           </MaterialList>
-        </item.content>
-        <item.footer as |Button|>
+        </Content>
+        <Footer as |Button|>
           <Button {{on 'click' close}}>
             abort
           </Button>
           <Button @unelevated={{true}} {{on 'click' close}}>
             Confirm
           </Button>
-        </item.footer>
+        </Footer>
       </:dialog>
     </MaterialDialog>
     <MaterialDialog @fullscreen={{this.fullscreen}} @scrollable={{true}}>
@@ -112,14 +109,14 @@
           Scrollable
         </Item>
       </:trigger>
-      <:dialog as |item close|>
-        <item.header>
+      <:dialog as |Header Content Footer close|>
+        <Header>
           How to use the Holy Hand Grenade
-        </item.header>
-        <item.content>
+        </Header>
+        <Content>
           <p>
             {{#let
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             maximus tellus id dictum lobortis. Nunc sit amet hendrerit neque,
             eget efficitur enim. Duis consectetur, sem eget tempus pulvinar,
             diam risus placerat augue, ut scelerisque nibh purus quis lacus.
@@ -133,41 +130,38 @@
             Praesent eu odio sed felis ultrices consectetur. Etiam auctor quis
             mauris quis tincidunt. Vivamus aliquam non nulla et malesuada. Nam
             cursus orci id quam cursus, a tempus arcu posuere.'
-              as |lorem|
+            as |lorem|
             }}
-              Remove the pin and count till three. Three should be the number
-              you count and the third number you've counted should be three. Not
-              two, not four. Five is right out! Then you sit amet, consectetur
-              adipiscing elit. Morbi maximus tellus id dictum lobortis. Nunc sit
-              amet hendrerit neque, eget efficitur enim.
-              {{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}
+            Remove the pin and count till three. Three should be the number
+            you count and the third number you've counted should be three. Not
+            two, not four. Five is right out! Then you sit amet, consectetur
+            adipiscing elit. Morbi maximus tellus id dictum lobortis. Nunc sit
+            amet hendrerit neque, eget efficitur enim.
+            {{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}
             {{/let}}
           </p>
-        </item.content>
-        <item.footer as |Button|>
+        </Content>
+        <Footer as |Button|>
           <Button @unelevated={{true}} {{on 'click' close}}>
             Understood
           </Button>
-        </item.footer>
+        </Footer>
       </:dialog>
     </MaterialDialog>
     <MaterialDialog @sheet={{true}} @fullscreen={{this.fullscreen}}>
       <:trigger as |open|>
-        <Item
-          @disabled={{not this.fullscreen}}
-          {{on 'click' open}}
-        >
+        <Item @disabled={{not this.fullscreen}} {{on 'click' open}}>
           Sheet
         </Item>
       </:trigger>
-      <:dialog as |item close|>
-        <item.header>
+      <:dialog as |Header Content Footer close|>
+        <Header>
           <:title>What's your favorite color?</:title>
           <:close as |IconButton|>
             <IconButton {{on 'click' close}}>close</IconButton>
           </:close>
-        </item.header>
-        <item.content>
+        </Header>
+        <Content>
           <MaterialList @avatar={{true}} as |Item|>
             <Item as |item|>
               <item.radioButton @leading={{true}} />
@@ -182,7 +176,7 @@
               Four
             </Item>
           </MaterialList>
-        </item.content>
+        </Content>
       </:dialog>
     </MaterialDialog>
   </MaterialList>
