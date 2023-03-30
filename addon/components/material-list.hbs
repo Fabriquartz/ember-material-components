@@ -1,9 +1,9 @@
 <ul
-  class="mdc-deprecated-list
+  class='mdc-deprecated-list
     {{if @twoLined 'mdc-deprecated-list--two-line'}}
-    {{if @avatar 'mdc-deprecated-list--avatar-list'}}"
+    {{if @avatar 'mdc-deprecated-list--avatar-list'}}'
   {{did-insert this.didInsert}}
   ...attributes
 >
-  {{yield (component 'material-list/item')(component 'material-list/divider')}}
+  {{yield (component 'material-list/item') (component 'material-list/divider')}}
 </ul>
