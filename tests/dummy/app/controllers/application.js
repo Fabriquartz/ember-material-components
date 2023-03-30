@@ -14,6 +14,7 @@ export default class ApplicationController extends Controller {
   get pages() {
     let pages = [
       { name: 'Button', route: 'material-button' },
+      { name: 'Button (icon)', route: 'material-icon-button' },
       { name: 'Card', route: 'material-card' },
       { name: 'Checkbox', route: 'material-checkbox' },
       { name: 'Chips', route: 'material-chips' },
