@@ -143,6 +143,34 @@
   </MaterialChips>
 </div>
 <div class='demo-title'>
+  Selectable chips without icon
+</div>
+<div class='demo-card'>
+  <MaterialChips as |Chip|>
+    <Chip @selectable={{true}} as |Button|>
+      <Button as |Text|>
+        <Text>
+          Favorite
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @selectable={{true}} as |Button|>
+      <Button as |Text|>
+        <Text>
+          Star
+        </Text>
+      </Button>
+    </Chip>
+    <Chip @selectable={{true}} as |Button|>
+      <Button as |Text|>
+        <Text>
+          Like
+        </Text>
+      </Button>
+    </Chip>
+  </MaterialChips>
+</div>
+<div class='demo-title'>
   Chips with secondary action
 </div>
 <div class='demo-card'>
