@@ -1,22 +1,21 @@
 {{yield this.open to='trigger'}}
 <div
   class='mdc-dialog
-    {{if @scrollable 'mdc-dialog--scrollable'}}
+    {{if @scrollable ' mdc-dialog--scrollable'}}
     {{if @fullscreen 'mdc-dialog--fullscreen'}}
     {{if @sheet 'mdc-dialog--sheet'}}
     {{@class}}'
   ...attributes
   {{did-insert this.didInsert}}
+  {{will-destroy this.close}}
 >
   <div class='mdc-dialog__scrim'></div>
   <div class='mdc-dialog__container'>
     <div class='mdc-dialog__surface'>
       {{yield
-        (hash
-          header=(component 'material-dialog/header' fullscreen=@fullscreen)
-          content=(component 'material-dialog/content')
-          footer=(component 'material-dialog/footer')
-        )
+        (component 'material-dialog/header' fullscreen=@fullscreen)
+        (component 'material-dialog/content')
+        (component 'material-dialog/footer')
         this.close
         to='dialog'
       }}

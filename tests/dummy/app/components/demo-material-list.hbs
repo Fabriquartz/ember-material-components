@@ -2,45 +2,52 @@
   One-lined list width leading and trailing icons
 </div>
 <div class='demo-card demo-card--material-list'>
-  <MaterialList as |Item Divider|>
-    <Item @activated={{true}} as |item|>
-      <item.icon @leading={{true}}>
-        plumbing
-      </item.icon>
-      Mario
-    </Item>
-    <Item as |item|>
-      <item.icon @leading={{true}}>
-        favorite
-      </item.icon>
-      Princess Peach
-    </Item>
-    <Item as |item|>
-      <item.icon @leading={{true}}>
-        bolt
-      </item.icon>
-      Bowser
-    </Item>
+  <MaterialListGroup as |List Header Divider|>
+    <List as |Item|>
+      <Item @activated={{true}} as |item|>
+        <item.icon @leading={{true}}>
+          plumbing
+        </item.icon>
+        Mario
+      </Item>
+      <Item as |item|>
+        <item.icon @leading={{true}}>
+          favorite
+        </item.icon>
+        Princess Peach
+      </Item>
+      <Item as |item|>
+        <item.icon @leading={{true}}>
+          bolt
+        </item.icon>
+        Bowser
+      </Item>
+    </List>
+    <Header>
+      Others
+    </Header>
     <Divider />
-    <Item as |item|>
-      <item.icon @leading={{true}}>
-        egg
-      </item.icon>
-      Yoshi
-      <item.icon>
-        info
-      </item.icon>
-    </Item>
-    <Item as |item|>
-      <item.icon @leading={{true}}>
-        star
-      </item.icon>
-      Toad
-      <item.icon>
-        info
-      </item.icon>
-    </Item>
-  </MaterialList>
+    <List as |Item|>
+      <Item as |item|>
+        <item.icon @leading={{true}}>
+          egg
+        </item.icon>
+        Yoshi
+        <item.icon>
+          info
+        </item.icon>
+      </Item>
+      <Item as |item|>
+        <item.icon @leading={{true}}>
+          star
+        </item.icon>
+        Toad
+        <item.icon>
+          info
+        </item.icon>
+      </Item>
+    </List>
+  </MaterialListGroup>
 </div>
 <div class='demo-title'>
   One-lined list with checkbox

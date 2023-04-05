@@ -1,5 +1,17 @@
-<div id="{{this.guid}}" class="mdc-tooltip" role="tooltip" aria-hidden="true" {{did-insert this.didInsert}}>
-  <div class="mdc-tooltip__surface mdc-tooltip__surface-animation">
-    {{yield}}
+<span
+  id={{concat 'tether-for-' this.guid}}
+  {{did-insert this.setAnchor}}
+></span>
+
+{{#in-element this.destinationElement}}
+  <div
+    id='{{this.guid}}'
+    class='mdc-tooltip'
+    role='tooltip'
+    {{did-insert this.attachTooltip}}
+  >
+    <div class='mdc-tooltip__surface mdc-tooltip__surface-animation'>
+      {{yield}}
+    </div>
   </div>
-</div>
+{{/in-element}}
