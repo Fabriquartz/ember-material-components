@@ -13,9 +13,12 @@
       class='mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary'
       {{did-insert this.attachRipple}}
     ></span>
+    {{#if (and @selectable (not @hasGraphic))}}
+      <MaterialChips::Chip::Button::Icon @onlyCheckmark={{true}} />
+    {{/if}}
     {{yield
       (component 'material-chips/chip/button/text')
-      (component 'material-chips/chip/button/icon' leading=@hasGraphic)
+      (component 'material-chips/chip/button/icon')
       (component 'material-chips/chip/button/avatar')
     }}
   </button>
