@@ -10,7 +10,7 @@ $material-card-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
   $surface: #fff,
   $on-surface: null,
   $error: null,
-  $on-error: null,
+  $on-error: null
 );
 
 html {
@@ -121,4 +121,52 @@ body {
     border-radius: 50%;
     background-size: cover;
   }
+}
+
+:root {
+  --brand-primary: #2196f3;
+}
+
+.docs {
+  &-hero {
+    .docs-max-w-sm {
+      max-width: 50rem;
+    }
+  }
+}
+
+ul {
+  > ul {
+    margin-left: 1em;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+.docs-md {
+  * {
+    box-sizing: content-box;
+  }
+
+  .mdc-icon-button {
+    box-sizing: border-box;
+    line-height: 1;
+  }
+
+  .mdc-radio__outer-circle,
+  .mdc-radio__inner-circle {
+    box-sizing: border-box;
+  }
+
+  ul {
+    li {
+      margin: 0;
+    }
+  }
+}
+
+nav {
+  z-index: 0 !important;
 }

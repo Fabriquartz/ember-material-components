@@ -1,0 +1,22 @@
+<DocsViewer as |viewer|>
+  <viewer.nav as |nav|>
+    <nav.section @label="Introduction" />
+    <nav.item @label="Index" @route="docs.index" />
+    <nav.item @label="Get started" @route="docs.get-started" />
+    <nav.section @label="Components" />
+    <nav.item @label="Button" @route="docs.button" />
+    <nav.item @label="Icon button" @route="docs.icon-button" />
+    <nav.item @label="Checkbox" @route="docs.checkbox" />
+    <nav.item @label="Chips" @route="docs.chips" />
+    <nav.item @label="Dialog" @route="docs.dialog" />
+    <nav.item @label="Radio button" @route="docs.radio-button" />
+    <nav.item @label="Switch" @route="docs.switch" />
+    <nav.item @label="Tab bar" @route="docs.tab-bar" />
+    <nav.item @label="Text field" @route="docs.text-field" />
+  </viewer.nav>
+
+  <viewer.main>
+    {{outlet}}
+  </viewer.main>
+
+</DocsViewer>

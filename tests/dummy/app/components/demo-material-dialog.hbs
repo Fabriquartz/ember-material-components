@@ -1,122 +1,121 @@
-<div class='demo-title'>
-  Dialog
-</div>
-<div class='demo-card demo-card--list'>
-  <MaterialList as |Item Divider|>
-    <Item as |item|>
-      Show dialogs in fullscreen
-      <item.switch @checked={{this.fullscreen}} @onChange={{fn this.update 'fullscreen' }} />
-    </Item>
-    <Divider />
-    <MaterialDialog @fullscreen={{this.fullscreen}}>
-      <:trigger as |open|>
-        <Item {{on 'click' open}}>
-          Alert
-        </Item>
-      </:trigger>
-      <:dialog as |Header Content Footer close|>
-        <Content>
-          <p>
-            To cross the river, you've to answer these questions three!
-          </p>
-        </Content>
-        <Footer as |Button|>
-          <Button @unelevated={{true}} {{on 'click' close}}>
-            OK
-          </Button>
-        </Footer>
-      </:dialog>
-    </MaterialDialog>
-    <MaterialDialog @fullscreen={{this.fullscreen}}>
-      <:trigger as |open|>
-        <Item {{on 'click' open}}>
-          Simple
-        </Item>
-      </:trigger>
-      <:dialog as |Header Content|>
-        <Header>
-          Select your account
-        </Header>
-        <Content>
-          <MaterialList @avatar={{true}} as |Item|>
-            <Item as |item|>
-              <item.icon @leading={{true}}>
-                person
-              </item.icon>
-              sir_lancelot_the_brave@example.com
-            </Item>
-            <Item as |item|>
-              <item.icon @leading={{true}}>
-                person
-              </item.icon>
-              sir_bedevere_the_wise@example.com
-            </Item>
-            <Item as |item|>
-              <item.icon @leading={{true}}>
-                person
-              </item.icon>
-              sir_galahad_the_pure@example.com
-            </Item>
-            <Item {{on 'click' this.transitionTo}} as |item|>
-              <item.icon @leading={{true}}>
-                add
-              </item.icon>
-              Add an account
-            </Item>
-          </MaterialList>
-        </Content>
-      </:dialog>
-    </MaterialDialog>
-    <MaterialDialog @fullscreen={{this.fullscreen}}>
-      <:trigger as |open|>
-        <Item {{on 'click' open}}>
-          Confirmation
-        </Item>
-      </:trigger>
-      <:dialog as |Header Content Footer close|>
-        <Header>
-          How brave is Sir Robin?
-        </Header>
-        <Content>
-          <MaterialList @avatar={{true}} as |Item|>
-            <Item as |item|>
-              <item.radioButton @leading={{true}} />
-              Very brave
-            </Item>
-            <Item as |item|>
-              <item.radioButton @leading={{true}} />
-              Not quite so brave as Sir Lancelot
-            </Item>
-            <Item as |item|>
-              <item.radioButton @leading={{true}} />
-              Not brave
-            </Item>
-          </MaterialList>
-        </Content>
-        <Footer as |Button|>
-          <Button {{on 'click' close}}>
-            abort
-          </Button>
-          <Button @unelevated={{true}} {{on 'click' close}}>
-            Confirm
-          </Button>
-        </Footer>
-      </:dialog>
-    </MaterialDialog>
-    <MaterialDialog @fullscreen={{this.fullscreen}} @scrollable={{true}}>
-      <:trigger as |open|>
-        <Item {{on 'click' open}}>
-          Scrollable
-        </Item>
-      </:trigger>
-      <:dialog as |Header Content Footer close|>
-        <Header>
-          How to use the Holy Hand Grenade
-        </Header>
-        <Content>
-          <p>
-            {{#let
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+<MaterialList as |Item Divider|>
+  <Item as |item|>
+    Show dialogs in fullscreen
+    <item.switch
+      @checked={{this.fullscreen}}
+      @onChange={{fn this.update "fullscreen"}}
+    />
+  </Item>
+  <Divider />
+  <MaterialDialog @fullscreen={{this.fullscreen}}>
+    <:trigger as |open|>
+      <Item {{on "click" open}}>
+        Alert
+      </Item>
+    </:trigger>
+    <:dialog as |Header Content Footer close|>
+      <Content>
+        <p>
+          To cross the river, you've to answer these questions three!
+        </p>
+      </Content>
+      <Footer as |Button|>
+        <Button @unelevated={{true}} {{on "click" close}}>
+          OK
+        </Button>
+      </Footer>
+    </:dialog>
+  </MaterialDialog>
+  <MaterialDialog @fullscreen={{this.fullscreen}}>
+    <:trigger as |open|>
+      <Item {{on "click" open}}>
+        Simple
+      </Item>
+    </:trigger>
+    <:dialog as |Header Content|>
+      <Header>
+        Select your account
+      </Header>
+      <Content>
+        <MaterialList @avatar={{true}} as |Item|>
+          <Item as |item|>
+            <item.icon @leading={{true}}>
+              person
+            </item.icon>
+            sir_lancelot_the_brave@example.com
+          </Item>
+          <Item as |item|>
+            <item.icon @leading={{true}}>
+              person
+            </item.icon>
+            sir_bedevere_the_wise@example.com
+          </Item>
+          <Item as |item|>
+            <item.icon @leading={{true}}>
+              person
+            </item.icon>
+            sir_galahad_the_pure@example.com
+          </Item>
+          <Item {{on "click" this.transitionTo}} as |item|>
+            <item.icon @leading={{true}}>
+              add
+            </item.icon>
+            Add an account
+          </Item>
+        </MaterialList>
+      </Content>
+    </:dialog>
+  </MaterialDialog>
+  <MaterialDialog @fullscreen={{this.fullscreen}}>
+    <:trigger as |open|>
+      <Item {{on "click" open}}>
+        Confirmation
+      </Item>
+    </:trigger>
+    <:dialog as |Header Content Footer close|>
+      <Header>
+        How brave is Sir Robin?
+      </Header>
+      <Content>
+        <MaterialList @avatar={{true}} as |Item|>
+          <Item as |item|>
+            <item.radioButton @leading={{true}} />
+            Very brave
+          </Item>
+          <Item as |item|>
+            <item.radioButton @leading={{true}} />
+            Not quite so brave as Sir Lancelot
+          </Item>
+          <Item as |item|>
+            <item.radioButton @leading={{true}} />
+            Not brave
+          </Item>
+        </MaterialList>
+      </Content>
+      <Footer as |Button|>
+        <Button {{on "click" close}}>
+          abort
+        </Button>
+        <Button @unelevated={{true}} {{on "click" close}}>
+          Confirm
+        </Button>
+      </Footer>
+    </:dialog>
+  </MaterialDialog>
+  <MaterialDialog @fullscreen={{this.fullscreen}} @scrollable={{true}}>
+    <:trigger as |open|>
+      <Item {{on "click" open}}>
+        Scrollable
+      </Item>
+    </:trigger>
+    <:dialog as |Header Content Footer close|>
+      <Header>
+        How to use the Holy Hand Grenade
+      </Header>
+      <Content>
+        <p>
+          {{#let
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             maximus tellus id dictum lobortis. Nunc sit amet hendrerit neque,
             eget efficitur enim. Duis consectetur, sem eget tempus pulvinar,
             diam risus placerat augue, ut scelerisque nibh purus quis lacus.
@@ -129,55 +128,54 @@
             imperdiet nulla. Donec a fermentum mauris, imperdiet tempus lorem.
             Praesent eu odio sed felis ultrices consectetur. Etiam auctor quis
             mauris quis tincidunt. Vivamus aliquam non nulla et malesuada. Nam
-            cursus orci id quam cursus, a tempus arcu posuere.'
+            cursus orci id quam cursus, a tempus arcu posuere."
             as |lorem|
-            }}
-            Remove the pin and count till three. Three should be the number
-            you count and the third number you've counted should be three. Not
-            two, not four. Five is right out! Then you sit amet, consectetur
+          }}
+            Remove the pin and count till three. Three should be the number you
+            count and the third number you've counted should be three. Not two,
+            not four. Five is right out! Then you sit amet, consectetur
             adipiscing elit. Morbi maximus tellus id dictum lobortis. Nunc sit
             amet hendrerit neque, eget efficitur enim.
             {{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}{{lorem}}
-            {{/let}}
-          </p>
-        </Content>
-        <Footer as |Button|>
-          <Button @unelevated={{true}} {{on 'click' close}}>
-            Understood
-          </Button>
-        </Footer>
-      </:dialog>
-    </MaterialDialog>
-    <MaterialDialog @sheet={{true}} @fullscreen={{this.fullscreen}}>
-      <:trigger as |open|>
-        <Item @disabled={{not this.fullscreen}} {{on 'click' open}}>
-          Sheet
-        </Item>
-      </:trigger>
-      <:dialog as |Header Content Footer close|>
-        <Header>
-          <:title>What's your favorite color?</:title>
-          <:close as |IconButton|>
-            <IconButton {{on 'click' close}}>close</IconButton>
-          </:close>
-        </Header>
-        <Content>
-          <MaterialList @avatar={{true}} as |Item|>
-            <Item as |item|>
-              <item.radioButton @leading={{true}} />
-              Blue
-            </Item>
-            <Item as |item|>
-              <item.radioButton @leading={{true}} />
-              Yellow
-            </Item>
-            <Item as |item|>
-              <item.radioButton @leading={{true}} />
-              Four
-            </Item>
-          </MaterialList>
-        </Content>
-      </:dialog>
-    </MaterialDialog>
-  </MaterialList>
-</div>
+          {{/let}}
+        </p>
+      </Content>
+      <Footer as |Button|>
+        <Button @unelevated={{true}} {{on "click" close}}>
+          Understood
+        </Button>
+      </Footer>
+    </:dialog>
+  </MaterialDialog>
+  <MaterialDialog @sheet={{true}} @fullscreen={{this.fullscreen}}>
+    <:trigger as |open|>
+      <Item @disabled={{not this.fullscreen}} {{on "click" open}}>
+        Sheet
+      </Item>
+    </:trigger>
+    <:dialog as |Header Content Footer close|>
+      <Header>
+        <:title>What's your favorite color?</:title>
+        <:close as |IconButton|>
+          <IconButton {{on "click" close}}>close</IconButton>
+        </:close>
+      </Header>
+      <Content>
+        <MaterialList @avatar={{true}} as |Item|>
+          <Item as |item|>
+            <item.radioButton @leading={{true}} />
+            Blue
+          </Item>
+          <Item as |item|>
+            <item.radioButton @leading={{true}} />
+            Yellow
+          </Item>
+          <Item as |item|>
+            <item.radioButton @leading={{true}} />
+            Four
+          </Item>
+        </MaterialList>
+      </Content>
+    </:dialog>
+  </MaterialDialog>
+</MaterialList>
