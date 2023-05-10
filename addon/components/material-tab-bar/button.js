@@ -8,7 +8,7 @@ import { MDCRipple } from '@material/ripple';
   one leading and one trailing. This component uses a native HTML button that
   can be treated as such using the splattributes.
 
-  @class MaterialButtonComponent
+  @class MaterialTabBarButtonComponent
   @yield {Component} material-icon
     The standard component for icons with additional CSS classes needed for icons in a button
   @yield {Component} material-button/text
@@ -26,12 +26,12 @@ export default class MaterialButtonComponent extends Component {
     @argument {String} class
   */
   /**
-    Changes the button to the outlined variant
-    @argument {Boolean} outlined
+    Changes the button to the stacked variant
+    @argument {Boolean} stacked
   */
   /**
-    Changes the button to the raised variant
-    @argument {Boolean} raised
+    Changes the button to the dense variant
+    @argument {Boolean} dense
   */
   /**
     Changes the button to the unelevated variant

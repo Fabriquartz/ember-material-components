@@ -1,12 +1,15 @@
-'use strict';
-
+const funnel = require('broccoli-funnel');
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
     sassOptions: {
-      onlyIncluded: false,
-      includePaths: ['node_modules'],
+      includePaths: [
+        'app/styles',
+        'addon/styles',
+        funnel('node_modules', { include: ['**/*.{scss,sass}'] }),
+      ],
+      onlyIncluded: true,
     },
   });
 
