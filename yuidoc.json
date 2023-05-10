@@ -1,7 +1,7 @@
 {
   "name": "@plonquo/ember-material-components",
   "description": "Wraps Google's Material Design Web Components with little fuss",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "options": {
     "paths": [
       "addon"
