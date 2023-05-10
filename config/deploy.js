@@ -2,6 +2,9 @@
 
 module.exports = function (deployTarget) {
   let ENV = {
+    pipeline: {
+      disabled: { 'ember-cli-addon-docs': true },
+    },
     build: {},
     // include other plugin configuration that applies to all deploy targets here
   };
