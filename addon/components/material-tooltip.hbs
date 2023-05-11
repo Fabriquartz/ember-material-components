@@ -6,8 +6,9 @@
 {{#in-element this.destinationElement insertBefore=null}}
   <div
     id='{{this.guid}}'
-    class='mdc-tooltip'
+    class='mdc-tooltip {{@class}}'
     role='tooltip'
+    ...attributes
     {{did-insert this.attachTooltip}}
   >
     <div class='mdc-tooltip__surface mdc-tooltip__surface-animation'>

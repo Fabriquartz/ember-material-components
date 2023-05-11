@@ -18,6 +18,7 @@ Router.map(function () {
     this.route('switch');
     this.route('tab-bar');
     this.route('text-field');
+    this.route('tooltip');
   });
 });
 
