@@ -8,9 +8,10 @@
   <span class='mdc-deprecated-list-item__ripple'></span>
   {{yield
     (hash
+      affix=(component 'material-list/item/affix')
       checkbox=(component 'material-list/item/checkbox')
       radioButton=(component 'material-list/item/radio-button')
-      switch=(component 'material-switch' class='mdc-deprecated-list-item__meta')
+      switch=(component 'material-list/item/switch')
       text=(component 'material-list/item/text')
       icon=(component 'material-list/item/icon')
     )

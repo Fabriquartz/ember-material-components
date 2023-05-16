@@ -12,6 +12,8 @@ $material-card-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
   $error: null,
   $on-error: null
 );
+@use '@material/switch';
+
 
 html {
   font-family: Roboto, sans-serif;
