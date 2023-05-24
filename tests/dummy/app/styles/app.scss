@@ -12,8 +12,20 @@ $material-card-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
   $error: null,
   $on-error: null
 );
-@use '@material/switch';
 
+.docs-viewer {
+  .docs-md {
+    aside {
+      &.mdc-drawer {
+        @extend .mdc-drawer;
+        margin: 0;
+        padding: 0;
+        font-style: normal;
+        font-size: 1rem;
+      }
+    }
+  }
+}
 
 html {
   font-family: Roboto, sans-serif;
@@ -171,4 +183,8 @@ button:focus {
 
 nav {
   z-index: 0 !important;
+}
+
+#example-demo-material-drawer-0 {
+  padding: 0
 }

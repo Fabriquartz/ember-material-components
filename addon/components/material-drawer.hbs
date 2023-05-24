@@ -1,7 +1,8 @@
 <aside
   class='mdc-drawer
     {{if @modal "mdc-drawer--modal"}}
-    {{if @dismissable "mdc-drawer--dismissible"}}'
+    {{if @dismissable "mdc-drawer--dismissible"}}
+    {{@class}}'
   {{did-insert this.attachDrawer}}
   ...attributes
 >
