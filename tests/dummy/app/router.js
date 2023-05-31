@@ -12,12 +12,19 @@ Router.map(function () {
     this.route('button');
     this.route('checkbox');
     this.route('chips');
+    this.route('drawer');
     this.route('icon-button');
     this.route('dialog');
+    this.route('list');
     this.route('radio-button');
     this.route('switch');
     this.route('tab-bar');
     this.route('text-field');
+    this.route('tooltip');
+  });
+
+  this.route('demo', function () {
+    this.route('drawer');
   });
 });
 

@@ -1,0 +1,41 @@
+{{! BEGIN-SNIPPET demo-material-drawer-0.hbs}}
+<div class="dummy-application">
+  {{#if this._drawer}}
+    <MaterialDrawer @modal={{this.modal}} @dismissable={{this.dismissable}}>
+      <:drawerContent as |Header Navigation toggleDrawer|>
+        <Header>
+          <:title>The Title</:title>
+          <:subtitle>Put your subtitle hier </:subtitle>
+        </Header>
+        <Navigation as |Item Divider Subheader|>
+          <Divider />
+          <Subheader>Drawer variants</Subheader>
+          {{#each (array "Default" "Modal" "Dismissable") as |view index|}}
+            <Item
+              @activated={{eq this.currentDrawerView index}}
+              {{on "click" (fn this.toggleDrawerVersion toggleDrawer index)}}
+            >
+              <:title>{{view}} drawer</:title>
+            </Item>
+          {{/each}}
+        </Navigation>
+      </:drawerContent>
+      <:applicationContent as |toggleDrawer|>
+        <MaterialTopAppBar>
+          <:navigation as |IconButton|>
+            {{#if (or this.modal this.dismissable)}}
+              <IconButton {{on "click" toggleDrawer}}>
+                menu
+              </IconButton>
+            {{/if}}
+          </:navigation>
+          <:title>
+            Material Drawer Demo
+          </:title>
+        </MaterialTopAppBar>
+        {{!-- content --}}
+      </:applicationContent>
+    </MaterialDrawer>
+  {{/if}}
+</div>
+{{! END-SNIPPET}}
