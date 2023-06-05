@@ -31,7 +31,6 @@ jobs:
           cache: yarn
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
-      - run: 
       - name: build
         run: ember build
       - name: Upload artifact
