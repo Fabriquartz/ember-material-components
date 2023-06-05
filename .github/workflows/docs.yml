@@ -31,12 +31,12 @@ jobs:
           cache: yarn
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
-      - name: build
+      - name: Build
         run: yarn run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: '/dist'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
