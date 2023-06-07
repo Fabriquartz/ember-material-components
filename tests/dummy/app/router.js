@@ -14,6 +14,7 @@ Router.map(function () {
     this.route('chips');
     this.route('drawer');
     this.route('icon-button');
+    this.route('icon');
     this.route('dialog');
     this.route('list');
     this.route('radio-button');

@@ -13,7 +13,7 @@ The Splattributes and ```@class``` are appended to the drawer.
 
 <DocsDemo as |demo|>
   <demo.example @name="demo-material-drawer-0">
-    <iFrame src='/demo/drawer' width="100%" height="400px"></iFrame>
+    <iFrame src={{this.demoURL}} width="100%" height="400px"></iFrame>
   </demo.example>
   <demo.snippet @name="demo-material-drawer-0.hbs" />
   <demo.snippet @name="demo-material-drawer-0.js" />
