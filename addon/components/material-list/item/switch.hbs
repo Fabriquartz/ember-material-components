@@ -1,10 +1,10 @@
 <div
-  class='{{if
+  class="{{if
       @leading
       'mdc-deprecated-list-item__graphic'
       'mdc-deprecated-list-item__meta'
     }}
-    {{@class}}'
+    {{@class}}"
 >
-  <MaterialSwitch ...attributes />
+  <MaterialSwitch @checked={{@checked}} @onChange={{@onChange}} ...attributes />
 </div>

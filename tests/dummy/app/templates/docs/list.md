@@ -176,8 +176,11 @@ Please note that the switch only has enough space in an avatar list.
   <demo.example @name="demo-material-list-8.hbs">
     <MaterialList @avatar={{true}} as |Item|>
       <Item as |item|>
-        Trailing switch
-        <item.switch />
+        Trailing switch ({{this.value3}})
+        <item.switch
+          @checked={{this.value3}}
+          @onChange={{fn this.onChange 'value3'}} 
+        />
       </Item>
     </MaterialList>
   </demo.example>
@@ -187,8 +190,12 @@ Please note that the switch only has enough space in an avatar list.
   <demo.example @name="demo-material-list-9.hbs">
     <MaterialList @avatar={{true}} as |Item|>
       <Item as |item|>
-        <item.switch @leading={{true}} />
-        Leading switch
+        <item.switch
+          @leading={{true}}
+          @checked={{this.value3}}
+          @onChange={{fn this.onChange 'value3'}} 
+        />
+        Leading switch ({{this.value3}})
       </Item>
     </MaterialList>
   </demo.example>
